@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/Mashape/unirest-nodejs#readme"
-
-    >unirest (v0.5.1)</a>
+    <a href="https://github.com/Mashape/unirest-nodejs#readme">unirest (v0.5.1)</a>
 </h1>
 <h4>Simplified, lightweight HTTP client library</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.unirest">module unirest</a><ol>
 
@@ -2059,7 +2052,7 @@
           return header.toLowerCase()
         })
 
-        for (var i = 0; i &#x3c; lowercaseHeaders.length; i++) {
+        for (var i = 0; i &lt; lowercaseHeaders.length; i++) {
           if (lowercaseHeaders[i] === name) {
             return headers[i]
           }
@@ -2191,8 +2184,8 @@
   }
 } else if (is(data).a(String)) {
   if (!type) {
-    $this.type(&#x27;form&#x27;)
-    type = $this.options.headers[$this.hasHeader(&#x27;content-type&#x27;)]
+    $this.type('form')
+    type = $this.options.headers[$this.hasHeader('content-type')]
   }
 ...</pre></li>
     </ul>
@@ -2207,8 +2200,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">Request.uid = function (len) {
-  var output = &#x27;&#x27;
-  var chars = &#x27;abcdefghijklmnopqrstuvwxyz123456789&#x27;
+  var output = ''
+  var chars = 'abcdefghijklmnopqrstuvwxyz123456789'
   var nchars = chars.length
   while (len--) output += chars[Math.random() * nchars | 0]
   return output
@@ -2235,8 +2228,8 @@ $this.options.multipart = []
         }
 
         if (is(options).a(Object)) {
-if (options[&#x27;content-type&#x27;]) {
-  var type = Unirest.type(options[&#x27;content-type&#x27;], true)
+if (options['content-type']) {
+  var type = Unirest.type(options['content-type'], true)
   if (type) options.body = Unirest.<span class="apidocCodeKeywordSpan">Response.parse</span>(options.body)
 } else {
   if (is(options.body).a(Object)) {
@@ -2268,9 +2261,9 @@ $this.options.multipart.push(options)
   // Trailing CRLF
   lines.pop()
 
-  for (var i = 0, len = lines.length; i &#x3c; len; ++i) {
+  for (var i = 0, len = lines.length; i &lt; len; ++i) {
     line = lines[i]
-    index = line.indexOf(&#x27;:&#x27;)
+    index = line.indexOf(':')
     field = line.slice(0, index).toLowerCase()
     val = Unirest.trim(line.slice(index + 1))
     fields[field] = val
@@ -2297,8 +2290,8 @@ $this.options.multipart.push(options)
 
 ```js
 var CookieJar = unirest.jar();
-CookieJar.add(&#x27;key=value&#x27;, &#x27;/&#x27;); // Cookie string, pathname / url
-unirest.get(&#x27;http://mockbin.com/request&#x27;).jar(CookieJar);
+CookieJar.add('key=value', '/'); // Cookie string, pathname / url
+unirest.get('http://mockbin.com/request').jar(CookieJar);
 ```
 
 ## unirest.<span class="apidocCodeKeywordSpan">cookie</span>(String)
@@ -2383,7 +2376,7 @@ Creates a cookie, see above for example.
         return header.toLowerCase()
       })
 
-      for (var i = 0; i &#x3c; lowercaseHeaders.length; i++) {
+      for (var i = 0; i &lt; lowercaseHeaders.length; i++) {
         if (lowercaseHeaders[i] === name) {
           return headers[i]
         }
@@ -2499,14 +2492,14 @@ Creates a cookie, see above for example.
       if (!value.length) return $this
       $this.options.url += (does($this.o ...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var Request = unirest.patch(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.patch('http://mockbin.com/request');
 ```
 
 ### delete
 Returns a [Request](#request) object with the `method` option set to `DELETE`
 
 ```js
-var Request = unirest.<span class="apidocCodeKeywordSpan">delete</span>(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.<span class="apidocCodeKeywordSpan">delete</span>('http://mockbin.com/request');
 ```
 
 ## unirest.jar()
@@ -2542,8 +2535,8 @@ serialize: function (string, type) {
 },
 
 uid: function (len) {
-  var output = &#x27;&#x27;
-  var chars = &#x27;abcdefghijklmnopqrstuvwxyz123456789&#x27;
+  var output = ''
+  var chars = 'abcdefghijklmnopqrstuvwxyz123456789'
   var nchars = chars.length
 ...</pre></li>
     </ul>
@@ -2620,7 +2613,7 @@ uid: function (len) {
         return header.toLowerCase()
       })
 
-      for (var i = 0; i &#x3c; lowercaseHeaders.length; i++) {
+      for (var i = 0; i &lt; lowercaseHeaders.length; i++) {
         if (lowercaseHeaders[i] === name) {
           return headers[i]
         }
@@ -2743,14 +2736,14 @@ When no `callback` is present, the [Request](#request) object will be returned.
 Returns a [Request](#request) object with the `method` option set to `GET`
 
 ```js
-var Request = unirest.<span class="apidocCodeKeywordSpan">get</span>(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.<span class="apidocCodeKeywordSpan">get</span>('http://mockbin.com/request');
 ```
 
 ### head
 Returns a [Request](#request) object with the `method` option set to `HEAD`
 
 ```js
-var Request = unirest.head(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.head('http://mockbin.com/request');
 ...</pre></li>
     </ul>
 
@@ -2826,7 +2819,7 @@ var Request = unirest.head(&#x27;http://mockbin.com/request&#x27;);
         return header.toLowerCase()
       })
 
-      for (var i = 0; i &#x3c; lowercaseHeaders.length; i++) {
+      for (var i = 0; i &lt; lowercaseHeaders.length; i++) {
         if (lowercaseHeaders[i] === name) {
           return headers[i]
         }
@@ -2942,21 +2935,21 @@ var Request = unirest.head(&#x27;http://mockbin.com/request&#x27;);
       if (!value.length) return $this
       $this.options.url += (does($this.o ...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var Request = unirest.get(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.get('http://mockbin.com/request');
 ```
 
 ### head
 Returns a [Request](#request) object with the `method` option set to `HEAD`
 
 ```js
-var Request = unirest.<span class="apidocCodeKeywordSpan">head</span>(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.<span class="apidocCodeKeywordSpan">head</span>('http://mockbin.com/request');
 ```
 
 ### put
 Returns a [Request](#request) object with the `method` option set to `PUT`
 
 ```js
-var Request = unirest.put(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.put('http://mockbin.com/request');
 ...</pre></li>
     </ul>
 
@@ -2994,7 +2987,7 @@ var Request = unirest.put(&#x27;http://mockbin.com/request&#x27;);
 Returns a [Request](#request) object with the `method` option set to `DELETE`
 
 ```js
-var Request = unirest.delete(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.delete('http://mockbin.com/request');
 ```
 
 ## unirest.<span class="apidocCodeKeywordSpan">jar</span>()
@@ -3003,8 +2996,8 @@ Creates a container to store multiple cookies, i.e. a cookie jar.
 
 ```js
 var CookieJar = unirest.jar();
-CookieJar.add(&#x27;key=value&#x27;, &#x27;/&#x27;); // Cookie string, pathname / url
-unirest.get(&#x27;http://mockbin.com/request&#x27;).jar(CookieJar);
+CookieJar.add('key=value', '/'); // Cookie string, pathname / url
+unirest.get('http://mockbin.com/request').jar(CookieJar);
 ...</pre></li>
     </ul>
 
@@ -3021,7 +3014,7 @@ unirest.get(&#x27;http://mockbin.com/request&#x27;).jar(CookieJar);
   var results = []
 
   for (var key in map) {
-    if (typeof map.length !== &#x27;undefined&#x27;) {
+    if (typeof map.length !== 'undefined') {
       key = map[key]
     }
 
@@ -3123,7 +3116,7 @@ Unirest.firstMatch = function firstMatch (string, map) {
         return header.toLowerCase()
       })
 
-      for (var i = 0; i &#x3c; lowercaseHeaders.length; i++) {
+      for (var i = 0; i &lt; lowercaseHeaders.length; i++) {
         if (lowercaseHeaders[i] === name) {
           return headers[i]
         }
@@ -3271,13 +3264,13 @@ Unirest.firstMatch = function firstMatch (string, map) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">parsers.string = function (data) {
   var obj = {}
-  var pairs = data.split(&#x27;&#x26;&#x27;)
+  var pairs = data.split('&amp;')
   var parts
   var pair
 
-  for (var i = 0, len = pairs.length; i &#x3c; len; ++i) {
+  for (var i = 0, len = pairs.length; i &lt; len; ++i) {
     pair = pairs[i]
-    parts = pair.split(&#x27;=&#x27;)
+    parts = pair.split('=')
     obj[decodeURIComponent(parts[0])] = decodeURIComponent(parts[1])
   }
 
@@ -3358,7 +3351,7 @@ Unirest.firstMatch = function firstMatch (string, map) {
         return header.toLowerCase()
       })
 
-      for (var i = 0; i &#x3c; lowercaseHeaders.length; i++) {
+      for (var i = 0; i &lt; lowercaseHeaders.length; i++) {
         if (lowercaseHeaders[i] === name) {
           return headers[i]
         }
@@ -3481,14 +3474,14 @@ Unirest.firstMatch = function firstMatch (string, map) {
 Returns a [Request](#request) object with the `method` option set to `PATCH`
 
 ```js
-var Request = unirest.<span class="apidocCodeKeywordSpan">patch</span>(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.<span class="apidocCodeKeywordSpan">patch</span>('http://mockbin.com/request');
 ```
 
 ### delete
 Returns a [Request](#request) object with the `method` option set to `DELETE`
 
 ```js
-var Request = unirest.delete(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.delete('http://mockbin.com/request');
 ...</pre></li>
     </ul>
 
@@ -3564,7 +3557,7 @@ var Request = unirest.delete(&#x27;http://mockbin.com/request&#x27;);
         return header.toLowerCase()
       })
 
-      for (var i = 0; i &#x3c; lowercaseHeaders.length; i++) {
+      for (var i = 0; i &lt; lowercaseHeaders.length; i++) {
         if (lowercaseHeaders[i] === name) {
           return headers[i]
         }
@@ -3684,13 +3677,13 @@ var Request = unirest.delete(&#x27;http://mockbin.com/request&#x27;);
 
 ## Creating Requests
 
-You&#x27;re probably wondering how by using **Unirest** makes creating requests easier. Besides automatically supporting gzip, and
+You're probably wondering how by using **Unirest** makes creating requests easier. Besides automatically supporting gzip, and
  parsing responses, lets start with a basic working example:
 
 ```js
-unirest.<span class="apidocCodeKeywordSpan">post</span>(&#x27;http://mockbin.com/request&#x27;)
-.headers({&#x27;Accept&#x27;: &#x27;application/json&#x27;, &#x27;Content-Type&#x27;: &#x27;application/json&#x27;})
-.send({ &#x22;parameter&#x22;: 23, &#x22;foo&#x22;: &#x22;bar&#x22; })
+unirest.<span class="apidocCodeKeywordSpan">post</span>('http://mockbin.com/request')
+.headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
+.send({ "parameter": 23, "foo": "bar" })
 .end(function (response) {
   console.log(response.body);
 });
@@ -3770,7 +3763,7 @@ unirest.<span class="apidocCodeKeywordSpan">post</span>(&#x27;http://mockbin.com
         return header.toLowerCase()
       })
 
-      for (var i = 0; i &#x3c; lowercaseHeaders.length; i++) {
+      for (var i = 0; i &lt; lowercaseHeaders.length; i++) {
         if (lowercaseHeaders[i] === name) {
           return headers[i]
         }
@@ -3886,21 +3879,21 @@ unirest.<span class="apidocCodeKeywordSpan">post</span>(&#x27;http://mockbin.com
       if (!value.length) return $this
       $this.options.url += (does($this.o ...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var Request = unirest.head(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.head('http://mockbin.com/request');
 ```
 
 ### put
 Returns a [Request](#request) object with the `method` option set to `PUT`
 
 ```js
-var Request = unirest.<span class="apidocCodeKeywordSpan">put</span>(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.<span class="apidocCodeKeywordSpan">put</span>('http://mockbin.com/request');
 ```
 
 ### post
 Returns a [Request](#request) object with the `method` option set to `POST`
 
 ```js
-var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.post('http://mockbin.com/request');
 ...</pre></li>
     </ul>
 
@@ -3914,27 +3907,27 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function request(uri, options, callback) {
-  if (typeof uri === &#x27;undefined&#x27;) {
-    throw new Error(&#x27;undefined is not a valid uri or options object.&#x27;)
+  if (typeof uri === 'undefined') {
+    throw new Error('undefined is not a valid uri or options object.')
   }
 
   var params = initParams(uri, options, callback)
 
-  if (params.method === &#x27;HEAD&#x27; &#x26;&#x26; paramsHaveRequestBody(params)) {
-    throw new Error(&#x27;HTTP HEAD requests MUST NOT include a request body.&#x27;)
+  if (params.method === 'HEAD' &amp;&amp; paramsHaveRequestBody(params)) {
+    throw new Error('HTTP HEAD requests MUST NOT include a request body.')
   }
 
   return new request.Request(params)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-.header(&#x27;Accept&#x27;, &#x27;application/json&#x27;)
+.header('Accept', 'application/json')
 .field({
-  &#x27;parameter&#x27;: &#x27;value&#x27;
+  'parameter': 'value'
 })
 .attach({
-  &#x27;file&#x27;: &#x27;dog.png&#x27;,
-  &#x27;relative file&#x27;: fs.createReadStream(path.join(__dirname, &#x27;dog.png&#x27;)),
-  &#x27;remote file&#x27;: unirest.<span class="apidocCodeKeywordSpan">request</span>(&#x27;http://google.com/doodle.png&#x27;)
+  'file': 'dog.png',
+  'relative file': fs.createReadStream(path.join(__dirname, 'dog.png')),
+  'remote file': unirest.<span class="apidocCodeKeywordSpan">request</span>('http://google.com/doodle.png')
 })
 .end(function (response) {
   console.log(response.body);
@@ -4013,7 +4006,7 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
     self.response.destroy()
   }
 
-  self.emit(&#x27;abort&#x27;)
+  self.emit('abort')
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4054,14 +4047,14 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
     return self
   }
 
-  if (opts.sign_version == 4 || opts.sign_version == &#x27;4&#x27;) {
+  if (opts.sign_version == 4 || opts.sign_version == '4') {
     // use aws4
     var options = {
       host: self.uri.host,
       path: self.uri.path,
       method: self.method,
       headers: {
-        &#x27;content-type&#x27;: self.getHeader(&#x27;content-type&#x27;) || &#x27;&#x27;
+        'content-type': self.getHeader('content-type') || ''
       },
       body: self.body
     }
@@ -4069,34 +4062,34 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
       accessKeyId: opts.key,
       secretAccessKey: opts.secret
     })
-    self.setHeader(&#x27;authorization&#x27;, signRes.headers.Authorization)
-    self.setHeader(&#x27;x-amz-date&#x27;, signRes.headers[&#x27;X-Amz-Date&#x27;])
+    self.setHeader('authorization', signRes.headers.Authorization)
+    self.setHeader('x-amz-date', signRes.headers['X-Amz-Date'])
   }
   else {
     // default: use aws-sign2
     var date = new Date()
-    self.setHeader(&#x27;date&#x27;, date.toUTCString())
+    self.setHeader('date', date.toUTCString())
     var auth =
       { key: opts.key
       , secret: opts.secret
       , verb: self.method.toUpperCase()
       , date: date
-      , contentType: self.getHeader(&#x27;content-type&#x27;) || &#x27;&#x27;
-      , md5: self.getHeader(&#x27;content-md5&#x27;) || &#x27;&#x27;
+      , contentType: self.getHeader('content-type') || ''
+      , md5: self.getHeader('content-md5') || ''
       , amazonHeaders: aws2.canonicalizeHeaders(self.headers)
       }
     var path = self.uri.path
-    if (opts.bucket &#x26;&#x26; path) {
-      auth.resource = &#x27;/&#x27; + opts.bucket + path
-    } else if (opts.bucket &#x26;&#x26; !path) {
-      auth.resource = &#x27;/&#x27; + opts.bucket
-    } else if (!opts.bucket &#x26;&#x26; path) {
+    if (opts.bucket &amp;&amp; path) {
+      auth.resource = '/' + opts.bucket + path
+    } else if (opts.bucket &amp;&amp; !path) {
+      auth.resource = '/' + opts.bucket
+    } else if (!opts.bucket &amp;&amp; path) {
       auth.resource = path
-    } else if (!opts.bucket &#x26;&#x26; !path) {
-      auth.resource = &#x27;/&#x27;
+    } else if (!opts.bucket &amp;&amp; !path) {
+      auth.resource = '/'
     }
     auth.resource = aws2.canonicalizeResource(auth.resource)
-    self.setHeader(&#x27;authorization&#x27;, aws2.authorization(auth))
+    self.setHeader('authorization', aws2.authorization(auth))
   }
 
   return self
@@ -4115,7 +4108,7 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function debug() {
   if (Request.debug) {
-    console.error(&#x27;REQUEST %s&#x27;, util.format.apply(util, arguments))
+    console.error('REQUEST %s', util.format.apply(util, arguments))
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -4151,8 +4144,8 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">request.Request.prototype.enableUnixSocket = function () {
-  // Get the socket &#x26; request paths from the URL
-  var unixParts = this.uri.path.split(&#x27;:&#x27;)
+  // Get the socket &amp; request paths from the URL
+  var unixParts = this.uri.path.split(':')
     , host = unixParts[0]
     , path = unixParts[1]
   // Apply unix properties to request
@@ -4204,19 +4197,19 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
     <li>description and source-code<pre class="apidocCodePre">request.Request.prototype.form = function (form) {
   var self = this
   if (form) {
-    if (!/^application\/x-www-form-urlencoded\b/.test(self.getHeader(&#x27;content-type&#x27;))) {
-      self.setHeader(&#x27;content-type&#x27;, &#x27;application/x-www-form-urlencoded&#x27;)
+    if (!/^application\/x-www-form-urlencoded\b/.test(self.getHeader('content-type'))) {
+      self.setHeader('content-type', 'application/x-www-form-urlencoded')
     }
-    self.body = (typeof form === &#x27;string&#x27;)
-      ? self._qs.rfc3986(form.toString(&#x27;utf8&#x27;))
-      : self._qs.stringify(form).toString(&#x27;utf8&#x27;)
+    self.body = (typeof form === 'string')
+      ? self._qs.rfc3986(form.toString('utf8'))
+      : self._qs.stringify(form).toString('utf8')
     return self
   }
   // create form-data object
   self._form = new FormData()
-  self._form.on(&#x27;error&#x27;, function(err) {
-    err.message = &#x27;form-data: &#x27; + err.message
-    self.emit(&#x27;error&#x27;, err)
+  self._form.on('error', function(err) {
+    err.message = 'form-data: ' + err.message
+    self.emit('error', err)
     self.abort()
   })
   return self._form
@@ -4243,7 +4236,7 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
     if (key.length !== name.length) {
       return
     }
-    re = new RegExp(name, &#x27;i&#x27;)
+    re = new RegExp(name, 'i')
     match = key.match(re)
     if (match) {
       result = headers[key]
@@ -4284,11 +4277,11 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
   if (self.secureOptions) {
     options.secureOptions = self.secureOptions
   }
-  if (typeof self.rejectUnauthorized !== &#x27;undefined&#x27;) {
+  if (typeof self.rejectUnauthorized !== 'undefined') {
     options.rejectUnauthorized = self.rejectUnauthorized
   }
 
-  if (self.cert &#x26;&#x26; self.key) {
+  if (self.cert &amp;&amp; self.key) {
     options.key = self.key
     options.cert = self.cert
   }
@@ -4301,7 +4294,7 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
     options.passphrase = self.passphrase
   }
 
-  var poolKey = &#x27;&#x27;
+  var poolKey = ''
 
   // different types of agents are in different pools
   if (Agent !== self.httpModule.Agent) {
@@ -4310,68 +4303,68 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
 
   // ca option is only relevant if proxy or destination are https
   var proxy = self.proxy
-  if (typeof proxy === &#x27;string&#x27;) {
+  if (typeof proxy === 'string') {
     proxy = url.parse(proxy)
   }
-  var isHttps = (proxy &#x26;&#x26; proxy.protocol === &#x27;https:&#x27;) || this.uri.protocol === &#x27;https:&#x27;
+  var isHttps = (proxy &amp;&amp; proxy.protocol === 'https:') || this.uri.protocol === 'https:'
 
   if (isHttps) {
     if (options.ca) {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
       poolKey += options.ca
     }
 
-    if (typeof options.rejectUnauthorized !== &#x27;undefined&#x27;) {
+    if (typeof options.rejectUnauthorized !== 'undefined') {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
       poolKey += options.rejectUnauthorized
     }
 
     if (options.cert) {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
-      poolKey += options.cert.toString(&#x27;ascii&#x27;) + options.key.toString(&#x27;ascii&#x27;)
+      poolKey += options.cert.toString('ascii') + options.key.toString('ascii')
     }
 
     if (options.pfx) {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
-      poolKey += options.pfx.toString(&#x27;ascii&#x27;)
+      poolKey += options.pfx.toString('ascii')
     }
 
     if (options.ciphers) {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
       poolKey += options.ciphers
     }
 
     if (options.secureProtocol) {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
       poolKey += options.secureProtocol
     }
 
     if (options.secureOptions) {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
       poolKey += options.secureOptions
     }
   }
 
-  if (self.pool === globalPool &#x26;&#x26; !poolKey &#x26;&#x26; Object.keys(options).length === 0 &#x26;&#x26; self.httpModule.globalAgent) {
+  if (self.pool === globalPool &amp;&amp; !poolKey &amp;&amp; Object.keys(options).length === 0 &amp;&amp; self.httpModule.globalAgent) {
     // not doing anything special.  Use the globalAgent
     return self.httpModule.globalAgent
   }
 
-  // we&#x27;re using a stored agent.  Make sure it&#x27;s protocol-specific
+  // we're using a stored agent.  Make sure it's protocol-specific
   poolKey = self.uri.protocol + poolKey
 
   // generate a new agent for this setting if none yet exists
@@ -4399,7 +4392,7 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
     <ul>
     <li>description and source-code<pre class="apidocCodePre">request.Request.prototype.hawk = function (opts) {
   var self = this
-  self.setHeader(&#x27;Authorization&#x27;, hawk.client.header(self.uri, self.method, opts).field)
+  self.setHeader('Authorization', hawk.client.header(self.uri, self.method, opts).field)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4425,7 +4418,7 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
     method: self.method,
     path: self.path
   }, opts)
-  debug(&#x27;httpSignature authorization&#x27;, self.getHeader(&#x27;authorization&#x27;))
+  debug('httpSignature authorization', self.getHeader('authorization'))
 
   return self
 }</pre></li>
@@ -4454,7 +4447,7 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
   // Delete headers with value undefined since they break
   // ClientRequest.OutgoingMessage.setHeader in node 0.12
   for (var headerName in self.headers) {
-    if (typeof self.headers[headerName] === &#x27;undefined&#x27;) {
+    if (typeof self.headers[headerName] === 'undefined') {
       delete self.headers[headerName]
     }
   }
@@ -4462,7 +4455,7 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
   caseless.httpify(self, self.headers)
 
   if (!self.method) {
-    self.method = options.method || &#x27;GET&#x27;
+    self.method = options.method || 'GET'
   }
   if (!self.localAddress) {
     self.localAddress = options.localAddress
@@ -4471,14 +4464,14 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
   self._qs.init(options)
 
   debug(options)
-  if (!self.pool &#x26;&#x26; self.pool !== false) {
+  if (!self.pool &amp;&amp; self.pool !== false) {
     self.pool = globalPool
   }
   self.dests = self.dests || []
   self.__isRequestRequest = true
 
   // Protect against double callback
-  if (!self._callback &#x26;&#x26; self.callback) {
+  if (!self._callback &amp;&amp; self.callback) {
     self._callback = self.callback
     self.callback = function () {
       if (self._callbackCalled) {
@@ -4487,55 +4480,55 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
       self._callbackCalled = true
       self._callback.apply(self, arguments)
     }
-    self.on(&#x27;error&#x27;, self.callback.bind())
-    self.on(&#x27;complete&#x27;, self.callback.bind(self, null))
+    self.on('error', self.callback.bind())
+    self.on('complete', self.callback.bind(self, null))
   }
 
   // People use this property instead all the time, so support it
-  if (!self.uri &#x26;&#x26; self.url) {
+  if (!self.uri &amp;&amp; self.url) {
     self.uri = self.url
     delete self.url
   }
 
-  // If there&#x27;s a baseUrl, then use it as the base URL (i.e. uri must be
+  // If there's a baseUrl, then use it as the base URL (i.e. uri must be
   // specified as a relative path and is appended to baseUrl).
   if (self.baseUrl) {
-    if (typeof self.baseUrl !== &#x27;string&#x27;) {
-      return self.emit(&#x27;error&#x27;, new Error(&#x27;options.baseUrl must be a string&#x27;))
+    if (typeof self.baseUrl !== 'string') {
+      return self.emit('error', new Error('options.baseUrl must be a string'))
     }
 
-    if (typeof self.uri !== &#x27;string&#x27;) {
-      return self.emit(&#x27;error&#x27;, new Error(&#x27;options.uri must be a string when using options.baseUrl&#x27;))
+    if (typeof self.uri !== 'string') {
+      return self.emit('error', new Error('options.uri must be a string when using options.baseUrl'))
     }
 
-    if (self.uri.indexOf(&#x27;//&#x27;) === 0 || self.uri.indexOf(&#x27;://&#x27;) !== -1) {
-      return self.emit(&#x27;error&#x27;, new Error(&#x27;options.uri must be a path when using options.baseUrl&#x27;))
+    if (self.uri.indexOf('//') === 0 || self.uri.indexOf('://') !== -1) {
+      return self.emit('error', new Error('options.uri must be a path when using options.baseUrl'))
     }
 
-    // Handle all cases to make sure that there&#x27;s only one slash between
+    // Handle all cases to make sure that there's only one slash between
     // baseUrl and uri.
-    var baseUrlEndsWithSlash = self.baseUrl.lastIndexOf(&#x27;/&#x27;) === self.baseUrl.length - 1
-    var uriStartsWithSlash = self.uri.indexOf(&#x27;/&#x27;) === 0
+    var baseUrlEndsWithSlash = self.baseUrl.lastIndexOf('/') === self.baseUrl.length - 1
+    var uriStartsWithSlash = self.uri.indexOf('/') === 0
 
-    if (baseUrlEndsWithSlash &#x26;&#x26; uriStartsWithSlash) {
+    if (baseUrlEndsWithSlash &amp;&amp; uriStartsWithSlash) {
       self.uri = self.baseUrl + self.uri.slice(1)
     } else if (baseUrlEndsWithSlash || uriStartsWithSlash) {
       self.uri = self.baseUrl + self.uri
-    } else if (self.uri === &#x27;&#x27;) {
+    } else if (self.uri === '') {
       self.uri = self.baseUrl
     } else {
-      self.uri = self.baseUrl + &#x27;/&#x27; + self.uri
+      self.uri = self.baseUrl + '/' + self.uri
     }
     delete self.baseUrl
   }
 
-  // A URI is needed by this point, emit error if we haven&#x27;t been able to get one
+  // A URI is needed by this point, emit error if we haven't been able to get one
   if (!self.uri) {
-    return self.emit(&#x27;error&#x27;, new Error(&#x27;options.uri is a required argument&#x27;))
+    return self.emit('error', new Error('options.uri is a required argument'))
   }
 
   // If a string URI/URL was given, parse it into a URL object
-  if (typeof self.uri === &#x27;string&#x27;) {
+  if (typeof self.uri === 'string') {
     self.uri = url.parse(self.uri)
   }
 
@@ -4545,13 +4538,13 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
   }
 
   // DEPRECATED: Warning for users of the old Unix Sockets URL Scheme
-  if (self.uri.protocol === &#x27;unix:&#x27;) {
-    return self.emit(&#x27;error&#x27;, new Error(&#x27;`unix://` URL scheme is no longer supported. Please use the format `http://unix:SOCKET:
-PATH`&#x27;))
+  if (self.uri.protocol === 'unix:') {
+    return self.emit('error', new Error('`unix://` URL scheme is no longer supported. Please use the format `http://unix:SOCKET:
+PATH`'))
   }
 
   // Support Unix Sockets
-  if (self.uri.host === &#x27;unix&#x27;) {
+  if (self.uri.host === 'unix') {
     self.enableUnixSocket()
   }
 
@@ -4559,13 +4552,13 @@ PATH`&#x27;))
     self.rejectUnauthorized = false
   }
 
-  if (!self.uri.pathname) {self.uri.pathname = &#x27;/&#x27;}
+  if (!self.uri.pathname) {self.uri.pathname = '/'}
 
-  if (!(self.uri.host || (self.uri.hostname &#x26;&#x26; self.uri.port)) &#x26;&#x26; !self.uri.isUnix) {
-    // Invalid URI: it may generate lot of bad errors, like &#x27;TypeError: Cannot call method `indexOf` of undefined&#x27; in CookieJar
+  if (!(self.uri.host || (self.uri.hostname &amp;&amp; self.uri.port)) &amp;&amp; !self.uri.isUnix) {
+    // Invalid URI: it may generate lot of bad errors, like 'TypeError: Cannot call method `indexOf` of undefined' in CookieJar
     // Detect and reject it as soon as possible
     var faultyUri = url.format(self.uri)
-    var message = &#x27;Invalid URI &#x22;&#x27; + faultyUri + &#x27;&#x22;&#x27;
+    var message = 'Invalid URI "' + faultyUri + '"'
     if (Object.keys(options). ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4584,7 +4577,7 @@ PATH`&#x27;))
   var cookies
 
   if (self._redirect.redirectsFollowed === 0) {
-    self.originalCookieHeader = self.getHeader(&#x27;cookie&#x27;)
+    self.originalCookieHeader = self.getHeader('cookie')
   }
 
   if (!jar) {
@@ -4592,7 +4585,7 @@ PATH`&#x27;))
     cookies = false
     self._disableCookies = true
   } else {
-    var targetCookieJar = (jar &#x26;&#x26; jar.getCookieString) ? jar : globalCookieJar
+    var targetCookieJar = (jar &amp;&amp; jar.getCookieString) ? jar : globalCookieJar
     var urihref = self.uri.href
     //fetch cookie in the Specified host
     if (targetCookieJar) {
@@ -4601,12 +4594,12 @@ PATH`&#x27;))
   }
 
   //if need cookie and cookie is not empty
-  if (cookies &#x26;&#x26; cookies.length) {
+  if (cookies &amp;&amp; cookies.length) {
     if (self.originalCookieHeader) {
-      // Don&#x27;t overwrite existing Cookie header
-      self.setHeader(&#x27;cookie&#x27;, self.originalCookieHeader + &#x27;; &#x27; + cookies)
+      // Don't overwrite existing Cookie header
+      self.setHeader('cookie', self.originalCookieHeader + '; ' + cookies)
     } else {
-      self.setHeader(&#x27;cookie&#x27;, cookies)
+      self.setHeader('cookie', cookies)
     }
   }
   self._jar = jar
@@ -4627,34 +4620,34 @@ PATH`&#x27;))
     <li>description and source-code<pre class="apidocCodePre">request.Request.prototype.json = function (val) {
   var self = this
 
-  if (!self.hasHeader(&#x27;accept&#x27;)) {
-    self.setHeader(&#x27;accept&#x27;, &#x27;application/json&#x27;)
+  if (!self.hasHeader('accept')) {
+    self.setHeader('accept', 'application/json')
   }
 
-  if (typeof self.jsonReplacer === &#x27;function&#x27;) {
+  if (typeof self.jsonReplacer === 'function') {
     self._jsonReplacer = self.jsonReplacer
   }
 
   self._json = true
-  if (typeof val === &#x27;boolean&#x27;) {
+  if (typeof val === 'boolean') {
     if (self.body !== undefined) {
-      if (!/^application\/x-www-form-urlencoded\b/.test(self.getHeader(&#x27;content-type&#x27;))) {
+      if (!/^application\/x-www-form-urlencoded\b/.test(self.getHeader('content-type'))) {
         self.body = safeStringify(self.body, self._jsonReplacer)
       } else {
         self.body = self._qs.rfc3986(self.body)
       }
-      if (!self.hasHeader(&#x27;content-type&#x27;)) {
-        self.setHeader(&#x27;content-type&#x27;, &#x27;application/json&#x27;)
+      if (!self.hasHeader('content-type')) {
+        self.setHeader('content-type', 'application/json')
       }
     }
   } else {
     self.body = safeStringify(val, self._jsonReplacer)
-    if (!self.hasHeader(&#x27;content-type&#x27;)) {
-      self.setHeader(&#x27;content-type&#x27;, &#x27;application/json&#x27;)
+    if (!self.hasHeader('content-type')) {
+      self.setHeader('content-type', 'application/json')
     }
   }
 
-  if (typeof self.jsonReviver === &#x27;function&#x27;) {
+  if (typeof self.jsonReviver === 'function') {
     self._jsonReviver = self.jsonReviver
   }
 
@@ -4719,18 +4712,18 @@ PATH`&#x27;))
   if (self._aborted) {
     return
   }
-  if (self.req &#x26;&#x26; self.req._reusedSocket &#x26;&#x26; error.code === &#x27;ECONNRESET&#x27;
-      &#x26;&#x26; self.agent.addRequestNoreuse) {
+  if (self.req &amp;&amp; self.req._reusedSocket &amp;&amp; error.code === 'ECONNRESET'
+      &amp;&amp; self.agent.addRequestNoreuse) {
     self.agent = { addRequest: self.agent.addRequestNoreuse.bind(self.agent) }
     self.start()
     self.req.end()
     return
   }
-  if (self.timeout &#x26;&#x26; self.timeoutTimer) {
+  if (self.timeout &amp;&amp; self.timeoutTimer) {
     clearTimeout(self.timeoutTimer)
     self.timeoutTimer = null
   }
-  self.emit(&#x27;error&#x27;, error)
+  self.emit('error', error)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4746,18 +4739,18 @@ PATH`&#x27;))
     <ul>
     <li>description and source-code<pre class="apidocCodePre">request.Request.prototype.onRequestResponse = function (response) {
   var self = this
-  debug(&#x27;onRequestResponse&#x27;, self.uri.href, response.statusCode, response.headers)
-  response.on(&#x27;end&#x27;, function() {
+  debug('onRequestResponse', self.uri.href, response.statusCode, response.headers)
+  response.on('end', function() {
     if (self.timing) {
       self.elapsedTime += (new Date().getTime() - self.startTime)
-      debug(&#x27;elapsed time&#x27;, self.elapsedTime)
+      debug('elapsed time', self.elapsedTime)
       response.elapsedTime = self.elapsedTime
     }
-    debug(&#x27;response end&#x27;, self.uri.href, response.statusCode, response.headers)
+    debug('response end', self.uri.href, response.statusCode, response.headers)
   })
 
   if (self._aborted) {
-    debug(&#x27;aborted&#x27;, self.uri.href)
+    debug('aborted', self.uri.href)
     response.resume()
     return
   }
@@ -4767,13 +4760,13 @@ PATH`&#x27;))
   response.toJSON = responseToJSON
 
   // XXX This is different on 0.10, because SSL is strict by default
-  if (self.httpModule === https &#x26;&#x26;
-      self.strictSSL &#x26;&#x26; (!response.hasOwnProperty(&#x27;socket&#x27;) ||
+  if (self.httpModule === https &amp;&amp;
+      self.strictSSL &amp;&amp; (!response.hasOwnProperty('socket') ||
       !response.socket.authorized)) {
-    debug(&#x27;strict ssl error&#x27;, self.uri.href)
-    var sslErr = response.hasOwnProperty(&#x27;socket&#x27;) ? response.socket.authorizationError : self.uri.href + &#x27; does not support SSL
-&#x27;
-    self.emit(&#x27;error&#x27;, new Error(&#x27;SSL Error: &#x27; + sslErr))
+    debug('strict ssl error', self.uri.href)
+    var sslErr = response.hasOwnProperty('socket') ? response.socket.authorizationError : self.uri.href + ' does not support SSL
+'
+    self.emit('error', new Error('SSL Error: ' + sslErr))
     return
   }
 
@@ -4781,32 +4774,32 @@ PATH`&#x27;))
   // remove any authorization headers).  Also remember the case of the header
   // name because lots of broken servers expect Host instead of host and we
   // want the caller to be able to specify this.
-  self.originalHost = self.getHeader(&#x27;host&#x27;)
+  self.originalHost = self.getHeader('host')
   if (!self.originalHostHeaderName) {
-    self.originalHostHeaderName = self.hasHeader(&#x27;host&#x27;)
+    self.originalHostHeaderName = self.hasHeader('host')
   }
   if (self.setHost) {
-    self.removeHeader(&#x27;host&#x27;)
+    self.removeHeader('host')
   }
-  if (self.timeout &#x26;&#x26; self.timeoutTimer) {
+  if (self.timeout &amp;&amp; self.timeoutTimer) {
     clearTimeout(self.timeoutTimer)
     self.timeoutTimer = null
   }
 
-  var targetCookieJar = (self._jar &#x26;&#x26; self._jar.setCookie) ? self._jar : globalCookieJar
+  var targetCookieJar = (self._jar &amp;&amp; self._jar.setCookie) ? self._jar : globalCookieJar
   var addCookie = function (cookie) {
-    //set the cookie if it&#x27;s domain in the href&#x27;s domain.
+    //set the cookie if it's domain in the href's domain.
     try {
       targetCookieJar.setCookie(cookie, self.uri.href, {ignoreError: true})
     } catch (e) {
-      self.emit(&#x27;error&#x27;, e)
+      self.emit('error', e)
     }
   }
 
   response.caseless = caseless(response.headers)
 
-  if (response.caseless.has(&#x27;set-cookie&#x27;) &#x26;&#x26; (!self._disableCookies)) {
-    var headerName = response.caseless.has(&#x27;set-cookie&#x27;)
+  if (response.caseless.has('set-cookie') &amp;&amp; (!self._disableCookies)) {
+    var headerName = response.caseless.has('set-cookie')
     if (Array.isArray(response.headers[headerName])) {
       response.headers[headerName].forEach(addCookie)
     } else {
@@ -4819,21 +4812,21 @@ PATH`&#x27;))
   } else {
     // Be a good stream and emit end when the response is finished.
     // Hack to emit end on close because of a core bug that never fires end
-    response.on(&#x27;close&#x27;, function () {
+    response.on('close', function () {
       if (!self._ended) {
-        self.response.emit(&#x27;end&#x27;)
+        self.response.emit('end')
       }
     })
 
-    response.on(&#x27;end&#x27;, function () {
+    response.on('end', function () {
       self._ended = true
     })
 
     var noBody = function (code) {
       return (
-        self.method === &#x27;HEAD&#x27;
+        self.method === 'HEAD'
         // Informational
-        || (code &#x3e;= 100 &#x26;&#x26; code &#x3c; 200)
+        || (code &gt;= 100 &amp;&amp; code &lt; 200)
         // No Content
         || code === 204
         // Not Modified
@@ -4842,21 +4835,21 @@ PATH`&#x27;))
     }
 
     var responseContent
-    if (self.gzip &#x26;&#x26; !noBody(response.statusCode)) {
-      var contentEncoding = response.headers[&#x27;content-encoding&#x27;] || &#x27;identity&#x27;
+    if (self.gzip &amp;&amp; !noBody(response.statusCode)) {
+      var contentEncoding = response.headers['content-encoding'] || 'identity'
       contentEncoding = contentEncoding.trim().toLowerCase()
 
-      if (contentEncoding === &#x27;gzip&#x27;) {
+      if (contentEncoding === 'gzip') {
         responseContent = zlib.createGunzip()
         response.pipe(responseContent)
-      } else if (contentEncoding === &#x27;deflate&#x27;) {
+      } else if (contentEncoding === 'deflate') {
         responseContent = zlib.createInflate()
         response.pipe(responseContent)
       } else {
-        // Since previous versions didn&#x27;t check for Content-Encoding header,
+        // Since previous versions didn't check for Content-Encoding header,
         // ignore any invalid values to preserve backwards-compatibility
-        if (contentEncoding !== &#x27;identity&#x27;) {
-          debug(&#x27;ignoring unrecognized Content-Encoding &#x27; + contentEncoding)
+        if (contentEncoding !== 'identity') {
+          debug('ignoring unrecognized Content-Encoding ' + contentEncoding)
         }
         responseContent = response
       }
@@ -4866,7 +4859,7 @@ PATH`&#x27;))
 
     if (self.encoding) {
       if (self.dests.length !== 0) {
-        console.error(&#x27;Ignoring encoding parameter as this stream is being piped to another stream which makes the encoding opti ...</pre></li>
+        console.error('Ignoring encoding parameter as this stream is being piped to another stream which makes the encoding opti ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -4904,9 +4897,9 @@ PATH`&#x27;))
 
   if (self.response) {
     if (self._destdata) {
-      self.emit(&#x27;error&#x27;, new Error(&#x27;You cannot pipe after data has been emitted from the response.&#x27;))
+      self.emit('error', new Error('You cannot pipe after data has been emitted from the response.'))
     } else if (self._ended) {
-      self.emit(&#x27;error&#x27;, new Error(&#x27;You cannot pipe after the response has been ended.&#x27;))
+      self.emit('error', new Error('You cannot pipe after the response has been ended.'))
     } else {
       stream.Stream.prototype.pipe.call(self, dest, opts)
       self.pipeDest(dest)
@@ -4934,9 +4927,9 @@ PATH`&#x27;))
   var self = this
   var response = self.response
   // Called after the response is received
-  if (dest.headers &#x26;&#x26; !dest.headersSent) {
-    if (response.caseless.has(&#x27;content-type&#x27;)) {
-      var ctname = response.caseless.has(&#x27;content-type&#x27;)
+  if (dest.headers &amp;&amp; !dest.headersSent) {
+    if (response.caseless.has('content-type')) {
+      var ctname = response.caseless.has('content-type')
       if (dest.setHeader) {
         dest.setHeader(ctname, response.headers[ctname])
       }
@@ -4945,8 +4938,8 @@ PATH`&#x27;))
       }
     }
 
-    if (response.caseless.has(&#x27;content-length&#x27;)) {
-      var clname = response.caseless.has(&#x27;content-length&#x27;)
+    if (response.caseless.has('content-length')) {
+      var clname = response.caseless.has('content-length')
       if (dest.setHeader) {
         dest.setHeader(clname, response.headers[clname])
       } else {
@@ -4954,11 +4947,11 @@ PATH`&#x27;))
       }
     }
   }
-  if (dest.setHeader &#x26;&#x26; !dest.headersSent) {
+  if (dest.setHeader &amp;&amp; !dest.headersSent) {
     for (var i in response.headers) {
       // If the response content is being decoded, the Content-Encoding header
-      // of the response doesn&#x27;t represent the piped content, so don&#x27;t pass it.
-      if (!self.gzip || i !== &#x27;content-encoding&#x27;) {
+      // of the response doesn't represent the piped content, so don't pass it.
+      if (!self.gzip || i !== 'content-encoding') {
         dest.setHeader(i, response.headers[i])
       }
     }
@@ -4983,7 +4976,7 @@ PATH`&#x27;))
     <li>description and source-code<pre class="apidocCodePre">request.Request.prototype.qs = function (q, clobber) {
   var self = this
   var base
-  if (!clobber &#x26;&#x26; self.uri.query) {
+  if (!clobber &amp;&amp; self.uri.query) {
     base = self._qs.parse(self.uri.query)
   } else {
     base = {}
@@ -4995,15 +4988,15 @@ PATH`&#x27;))
 
   var qs = self._qs.stringify(base)
 
-  if (qs === &#x27;&#x27;) {
+  if (qs === '') {
     return self
   }
 
-  self.uri = url.parse(self.uri.href.split(&#x27;?&#x27;)[0] + &#x27;?&#x27; + qs)
+  self.uri = url.parse(self.uri.href.split('?')[0] + '?' + qs)
   self.url = self.uri
   self.path = self.uri.path
 
-  if (self.uri.host === &#x27;unix&#x27;) {
+  if (self.uri.host === 'unix') {
     self.enableUnixSocket()
   }
 
@@ -5023,21 +5016,21 @@ PATH`&#x27;))
     <ul>
     <li>description and source-code<pre class="apidocCodePre">request.Request.prototype.readResponseBody = function (response) {
   var self = this
-  debug(&#x27;reading response\&#x27;s body&#x27;)
+  debug('reading response\'s body')
   var buffer = bl()
     , strings = []
 
-  self.on(&#x27;data&#x27;, function (chunk) {
+  self.on('data', function (chunk) {
     if (Buffer.isBuffer(chunk)) {
       buffer.append(chunk)
     } else {
       strings.push(chunk)
     }
   })
-  self.on(&#x27;end&#x27;, function () {
-    debug(&#x27;end event&#x27;, self.uri.href)
+  self.on('end', function () {
+    debug('end event', self.uri.href)
     if (self._aborted) {
-      debug(&#x27;aborted&#x27;, self.uri.href)
+      debug('aborted', self.uri.href)
       // `buffer` is defined in the parent scope and used in a closure it exists for the life of the request.
       // This can lead to leaky behavior if the user retains a reference to the request object.
       buffer.destroy()
@@ -5045,10 +5038,10 @@ PATH`&#x27;))
     }
 
     if (buffer.length) {
-      debug(&#x27;has body&#x27;, self.uri.href, buffer.length)
+      debug('has body', self.uri.href, buffer.length)
       if (self.encoding === null) {
         // response.body = buffer
-        // can&#x27;t move to this until https://github.com/rvagg/bl/issues/13
+        // can't move to this until https://github.com/rvagg/bl/issues/13
         response.body = buffer.slice()
       } else {
         response.body = buffer.toString(self.encoding)
@@ -5058,26 +5051,26 @@ PATH`&#x27;))
       buffer.destroy()
     } else if (strings.length) {
       // The UTF8 BOM [0xEF,0xBB,0xBF] is converted to [0xFE,0xFF] in the JS UTC16/UCS2 representation.
-      // Strip this value out when the encoding is set to &#x27;utf8&#x27;, as upstream consumers won&#x27;t expect it and it breaks JSON.parse
+      // Strip this value out when the encoding is set to 'utf8', as upstream consumers won't expect it and it breaks JSON.parse
 ().
-      if (self.encoding === &#x27;utf8&#x27; &#x26;&#x26; strings[0].length &#x3e; 0 &#x26;&#x26; strings[0][0] === &#x27;\uFEFF&#x27;) {
+      if (self.encoding === 'utf8' &amp;&amp; strings[0].length &gt; 0 &amp;&amp; strings[0][0] === '\uFEFF') {
         strings[0] = strings[0].substring(1)
       }
-      response.body = strings.join(&#x27;&#x27;)
+      response.body = strings.join('')
     }
 
     if (self._json) {
       try {
         response.body = JSON.parse(response.body, self._jsonReviver)
       } catch (e) {
-        debug(&#x27;invalid JSON received&#x27;, self.uri.href)
+        debug('invalid JSON received', self.uri.href)
       }
     }
-    debug(&#x27;emitting complete&#x27;, self.uri.href)
-    if (typeof response.body === &#x27;undefined&#x27; &#x26;&#x26; !self._json) {
-      response.body = self.encoding === null ? new Buffer(0) : &#x27;&#x27;
+    debug('emitting complete', self.uri.href)
+    if (typeof response.body === 'undefined' &amp;&amp; !self._json) {
+      response.body = self.encoding === null ? new Buffer(0) : ''
     }
-    self.emit(&#x27;complete&#x27;, response, response.body)
+    self.emit('complete', response, response.body)
   })
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -5122,27 +5115,27 @@ PATH`&#x27;))
   }
 
   self._started = true
-  self.method = self.method || &#x27;GET&#x27;
+  self.method = self.method || 'GET'
   self.href = self.uri.href
 
-  if (self.src &#x26;&#x26; self.src.stat &#x26;&#x26; self.src.stat.size &#x26;&#x26; !self.hasHeader(&#x27;content-length&#x27;)) {
-    self.setHeader(&#x27;content-length&#x27;, self.src.stat.size)
+  if (self.src &amp;&amp; self.src.stat &amp;&amp; self.src.stat.size &amp;&amp; !self.hasHeader('content-length')) {
+    self.setHeader('content-length', self.src.stat.size)
   }
   if (self._aws) {
     self.aws(self._aws, true)
   }
 
   // We have a method named auth, which is completely different from the http.request
-  // auth option.  If we don&#x27;t remove it, we&#x27;re gonna have a bad time.
+  // auth option.  If we don't remove it, we're gonna have a bad time.
   var reqOptions = copy(self)
   delete reqOptions.auth
 
-  debug(&#x27;make request&#x27;, self.uri.href)
+  debug('make request', self.uri.href)
 
   try {
     self.req = self.httpModule.request(reqOptions)
   } catch (err) {
-    self.emit(&#x27;error&#x27;, err)
+    self.emit('error', err)
     return
   }
 
@@ -5150,19 +5143,19 @@ PATH`&#x27;))
     self.startTime = new Date().getTime()
   }
 
-  if (self.timeout &#x26;&#x26; !self.timeoutTimer) {
-    var timeout = self.timeout &#x3c; 0 ? 0 : self.timeout
+  if (self.timeout &amp;&amp; !self.timeoutTimer) {
+    var timeout = self.timeout &lt; 0 ? 0 : self.timeout
     // Set a timeout in memory - this block will throw if the server takes more
     // than `timeout` to write the HTTP status and headers (corresponding to
-    // the on(&#x27;response&#x27;) event on the client). NB: this measures wall-clock
+    // the on('response') event on the client). NB: this measures wall-clock
     // time, not the time between bytes sent by the server.
     self.timeoutTimer = setTimeout(function () {
-      var connectTimeout = self.req.socket &#x26;&#x26; self.req.socket.readable === false
+      var connectTimeout = self.req.socket &amp;&amp; self.req.socket.readable === false
       self.abort()
-      var e = new Error(&#x27;ETIMEDOUT&#x27;)
-      e.code = &#x27;ETIMEDOUT&#x27;
+      var e = new Error('ETIMEDOUT')
+      e.code = 'ETIMEDOUT'
       e.connect = connectTimeout
-      self.emit(&#x27;error&#x27;, e)
+      self.emit('error', e)
     }, timeout)
 
     if (self.req.setTimeout) { // only works on node 0.6+
@@ -5171,30 +5164,30 @@ PATH`&#x27;))
       // from the server, and may or may not correspond to the wall-clock time
       // elapsed from the start of the request.
       //
-      // In particular, it&#x27;s useful for erroring if the server fails to send
+      // In particular, it's useful for erroring if the server fails to send
       // data halfway through streaming a response.
       self.req.setTimeout(timeout, function () {
         if (self.req) {
           self.req.abort()
-          var e = new Error(&#x27;ESOCKETTIMEDOUT&#x27;)
-          e.code = &#x27;ESOCKETTIMEDOUT&#x27;
+          var e = new Error('ESOCKETTIMEDOUT')
+          e.code = 'ESOCKETTIMEDOUT'
           e.connect = false
-          self.emit(&#x27;error&#x27;, e)
+          self.emit('error', e)
         }
       })
     }
   }
 
-  self.req.on(&#x27;response&#x27;, self.onRequestResponse.bind(self))
-  self.req.on(&#x27;error&#x27;, self.onRequestError.bind(self))
-  self.req.on(&#x27;drain&#x27;, function() {
-    self.emit(&#x27;drain&#x27;)
+  self.req.on('response', self.onRequestResponse.bind(self))
+  self.req.on('error', self.onRequestError.bind(self))
+  self.req.on('drain', function() {
+    self.emit('drain')
   })
-  self.req.on(&#x27;socket&#x27;, function(socket) {
-    self.emit(&#x27;socket&#x27;, socket)
+  self.req.on('socket', function(socket) {
+    self.emit('socket', socket)
   })
 
-  self.emit(&#x27;request&#x27;, self.req)
+  self.emit('request', self.req)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5256,14 +5249,14 @@ PATH`&#x27;))
 
   options = options || {}
 
-  if (typeof options === &#x27;function&#x27;) {
+  if (typeof options === 'function') {
     requester = options
     options = {}
   }
 
   var defaults      = wrapRequestMethod(self, options, requester)
 
-  var verbs = [&#x27;get&#x27;, &#x27;head&#x27;, &#x27;post&#x27;, &#x27;put&#x27;, &#x27;patch&#x27;, &#x27;del&#x27;, &#x27;delete&#x27;]
+  var verbs = ['get', 'head', 'post', 'put', 'patch', 'del', 'delete']
   verbs.forEach(function(verb) {
     defaults[verb]  = wrapRequestMethod(self[verb], options, requester, verb)
   })
@@ -5378,14 +5371,14 @@ PATH`&#x27;))
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function initParams(uri, options, callback) {
-  if (typeof options === &#x27;function&#x27;) {
+  if (typeof options === 'function') {
     callback = options
   }
 
   var params = {}
-  if (typeof options === &#x27;object&#x27;) {
+  if (typeof options === 'object') {
     extend(params, options, {uri: uri})
-  } else if (typeof uri === &#x27;string&#x27;) {
+  } else if (typeof uri === 'string') {
     extend(params, {uri: uri})
   } else {
     extend(params, uri)
@@ -5500,7 +5493,7 @@ if (options.store) {
 query: function (value) {
   if (is(value).a(Object)) value = Unirest.<span class="apidocCodeKeywordSpan">serializers.form</span>(value)
   if (!value.length) return $this
-  $this.options.url += (does($this.options.url).contain(&#x27;?&#x27;) ? &#x27;&#x26;&#x27; : &#x27;?&#x27;) + value
+  $this.options.url += (does($this.options.url).contain('?') ? '&amp;' : '?') + value
   return $this
 },
 
@@ -5524,8 +5517,8 @@ query: function (value) {
     <li>example usage<pre class="apidocCodePre">...
 
 if (is(options).a(Object)) {
-  if (options[&#x27;content-type&#x27;]) {
-    var type = Unirest.type(options[&#x27;content-type&#x27;], true)
+  if (options['content-type']) {
+    var type = Unirest.type(options['content-type'], true)
     if (type) options.body = Unirest.Response.parse(options.body)
   } else {
     if (is(options.body).a(Object)) {
@@ -5589,12 +5582,12 @@ result.cookie = function (name) {
 }
 
 function setCookie (cookie) {
-  var crumbs = Unirest.<span class="apidocCodeKeywordSpan">trim</span>(cookie).split(&#x27;=&#x27;)
+  var crumbs = Unirest.<span class="apidocCodeKeywordSpan">trim</span>(cookie).split('=')
   var key = Unirest.trim(crumbs[0])
-  var value = Unirest.trim(crumbs.slice(1).join(&#x27;=&#x27;))
+  var value = Unirest.trim(crumbs.slice(1).join('='))
 
-  if (crumbs[0] &#x26;&#x26; crumbs[0] !== &#x27;&#x27;) {
-    result.cookies[key] = value === &#x27;&#x27; ? true : value
+  if (crumbs[0] &amp;&amp; crumbs[0] !== '') {
+    result.cookies[key] = value === '' ? true : value
   }
 }
 ...</pre></li>
@@ -5610,7 +5603,7 @@ function setCookie (cookie) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">type = function (type, parse) {
-  if (typeof type !== &#x27;string&#x27;) return false
+  if (typeof type !== 'string') return false
   return parse ? type.split(/ *; */).shift() : (Unirest.types[type] || type)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -5629,7 +5622,7 @@ When mime-type is `application/x-www-form-urlencoded` data is appended rather th
 **JSON**
 
 ```js
-unirest.post(&#x27;http://mockbin.com/request&#x27;)
+unirest.post('http://mockbin.com/request')
 ...</pre></li>
     </ul>
 
@@ -5675,8 +5668,8 @@ unirest.post(&#x27;http://mockbin.com/request&#x27;)
   }
 } else if (is(data).a(String)) {
   if (!type) {
-    $this.type(&#x27;form&#x27;)
-    type = $this.options.headers[$this.hasHeader(&#x27;content-type&#x27;)]
+    $this.type('form')
+    type = $this.options.headers[$this.hasHeader('content-type')]
   }
 ...</pre></li>
     </ul>
@@ -5691,8 +5684,8 @@ unirest.post(&#x27;http://mockbin.com/request&#x27;)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">uid = function (len) {
-  var output = &#x27;&#x27;
-  var chars = &#x27;abcdefghijklmnopqrstuvwxyz123456789&#x27;
+  var output = ''
+  var chars = 'abcdefghijklmnopqrstuvwxyz123456789'
   var nchars = chars.length
   while (len--) output += chars[Math.random() * nchars | 0]
   return output
@@ -5730,8 +5723,8 @@ unirest.post(&#x27;http://mockbin.com/request&#x27;)
   }
 } else if (is(data).a(String)) {
   if (!type) {
-    $this.type(&#x27;form&#x27;)
-    type = $this.options.headers[$this.hasHeader(&#x27;content-type&#x27;)]
+    $this.type('form')
+    type = $this.options.headers[$this.hasHeader('content-type')]
   }
 ...</pre></li>
     </ul>
@@ -5751,8 +5744,8 @@ unirest.post(&#x27;http://mockbin.com/request&#x27;)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">uid = function (len) {
-  var output = &#x27;&#x27;
-  var chars = &#x27;abcdefghijklmnopqrstuvwxyz123456789&#x27;
+  var output = ''
+  var chars = 'abcdefghijklmnopqrstuvwxyz123456789'
   var nchars = chars.length
   while (len--) output += chars[Math.random() * nchars | 0]
   return output
@@ -5818,9 +5811,9 @@ This object is modeled after the `request` libraries options that are passed alo
   // Trailing CRLF
   lines.pop()
 
-  for (var i = 0, len = lines.length; i &#x3c; len; ++i) {
+  for (var i = 0, len = lines.length; i &lt; len; ++i) {
     line = lines[i]
-    index = line.indexOf(&#x27;:&#x27;)
+    index = line.indexOf(':')
     field = line.slice(0, index).toLowerCase()
     val = Unirest.trim(line.slice(index + 1))
     fields[field] = val
@@ -5896,9 +5889,9 @@ This object is modeled after the `request` libraries options that are passed alo
   // Trailing CRLF
   lines.pop()
 
-  for (var i = 0, len = lines.length; i &#x3c; len; ++i) {
+  for (var i = 0, len = lines.length; i &lt; len; ++i) {
     line = lines[i]
-    index = line.indexOf(&#x27;:&#x27;)
+    index = line.indexOf(':')
     field = line.slice(0, index).toLowerCase()
     val = Unirest.trim(line.slice(index + 1))
     fields[field] = val
@@ -5930,8 +5923,8 @@ This object is modeled after the `request` libraries options that are passed alo
 
 ```js
 var CookieJar = unirest.jar();
-CookieJar.add(&#x27;key=value&#x27;, &#x27;/&#x27;); // Cookie string, pathname / url
-unirest.get(&#x27;http://mockbin.com/request&#x27;).jar(CookieJar);
+CookieJar.add('key=value', '/'); // Cookie string, pathname / url
+unirest.get('http://mockbin.com/request').jar(CookieJar);
 ```
 
 ## unirest.<span class="apidocCodeKeywordSpan">cookie</span>(String)
@@ -6021,7 +6014,7 @@ Creates a cookie, see above for example.
         return header.toLowerCase()
       })
 
-      for (var i = 0; i &#x3c; lowercaseHeaders.length; i++) {
+      for (var i = 0; i &lt; lowercaseHeaders.length; i++) {
         if (lowercaseHeaders[i] === name) {
           return headers[i]
         }
@@ -6137,14 +6130,14 @@ Creates a cookie, see above for example.
       if (!value.length) return $this
       $this.options.url += (does($this.o ...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var Request = unirest.patch(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.patch('http://mockbin.com/request');
 ```
 
 ### delete
 Returns a [Request](#request) object with the `method` option set to `DELETE`
 
 ```js
-var Request = unirest.<span class="apidocCodeKeywordSpan">delete</span>(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.<span class="apidocCodeKeywordSpan">delete</span>('http://mockbin.com/request');
 ```
 
 ## unirest.jar()
@@ -6185,8 +6178,8 @@ serialize: function (string, type) {
 },
 
 uid: function (len) {
-  var output = &#x27;&#x27;
-  var chars = &#x27;abcdefghijklmnopqrstuvwxyz123456789&#x27;
+  var output = ''
+  var chars = 'abcdefghijklmnopqrstuvwxyz123456789'
   var nchars = chars.length
 ...</pre></li>
     </ul>
@@ -6268,7 +6261,7 @@ uid: function (len) {
         return header.toLowerCase()
       })
 
-      for (var i = 0; i &#x3c; lowercaseHeaders.length; i++) {
+      for (var i = 0; i &lt; lowercaseHeaders.length; i++) {
         if (lowercaseHeaders[i] === name) {
           return headers[i]
         }
@@ -6391,14 +6384,14 @@ When no `callback` is present, the [Request](#request) object will be returned.
 Returns a [Request](#request) object with the `method` option set to `GET`
 
 ```js
-var Request = unirest.<span class="apidocCodeKeywordSpan">get</span>(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.<span class="apidocCodeKeywordSpan">get</span>('http://mockbin.com/request');
 ```
 
 ### head
 Returns a [Request](#request) object with the `method` option set to `HEAD`
 
 ```js
-var Request = unirest.head(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.head('http://mockbin.com/request');
 ...</pre></li>
     </ul>
 
@@ -6479,7 +6472,7 @@ var Request = unirest.head(&#x27;http://mockbin.com/request&#x27;);
         return header.toLowerCase()
       })
 
-      for (var i = 0; i &#x3c; lowercaseHeaders.length; i++) {
+      for (var i = 0; i &lt; lowercaseHeaders.length; i++) {
         if (lowercaseHeaders[i] === name) {
           return headers[i]
         }
@@ -6595,21 +6588,21 @@ var Request = unirest.head(&#x27;http://mockbin.com/request&#x27;);
       if (!value.length) return $this
       $this.options.url += (does($this.o ...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var Request = unirest.get(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.get('http://mockbin.com/request');
 ```
 
 ### head
 Returns a [Request](#request) object with the `method` option set to `HEAD`
 
 ```js
-var Request = unirest.<span class="apidocCodeKeywordSpan">head</span>(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.<span class="apidocCodeKeywordSpan">head</span>('http://mockbin.com/request');
 ```
 
 ### put
 Returns a [Request](#request) object with the `method` option set to `PUT`
 
 ```js
-var Request = unirest.put(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.put('http://mockbin.com/request');
 ...</pre></li>
     </ul>
 
@@ -6652,7 +6645,7 @@ var Request = unirest.put(&#x27;http://mockbin.com/request&#x27;);
 Returns a [Request](#request) object with the `method` option set to `DELETE`
 
 ```js
-var Request = unirest.delete(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.delete('http://mockbin.com/request');
 ```
 
 ## unirest.<span class="apidocCodeKeywordSpan">jar</span>()
@@ -6661,8 +6654,8 @@ Creates a container to store multiple cookies, i.e. a cookie jar.
 
 ```js
 var CookieJar = unirest.jar();
-CookieJar.add(&#x27;key=value&#x27;, &#x27;/&#x27;); // Cookie string, pathname / url
-unirest.get(&#x27;http://mockbin.com/request&#x27;).jar(CookieJar);
+CookieJar.add('key=value', '/'); // Cookie string, pathname / url
+unirest.get('http://mockbin.com/request').jar(CookieJar);
 ...</pre></li>
     </ul>
 
@@ -6684,7 +6677,7 @@ unirest.get(&#x27;http://mockbin.com/request&#x27;).jar(CookieJar);
   var results = []
 
   for (var key in map) {
-    if (typeof map.length !== &#x27;undefined&#x27;) {
+    if (typeof map.length !== 'undefined') {
       key = map[key]
     }
 
@@ -6791,7 +6784,7 @@ Unirest.firstMatch = function firstMatch (string, map) {
         return header.toLowerCase()
       })
 
-      for (var i = 0; i &#x3c; lowercaseHeaders.length; i++) {
+      for (var i = 0; i &lt; lowercaseHeaders.length; i++) {
         if (lowercaseHeaders[i] === name) {
           return headers[i]
         }
@@ -6933,8 +6926,8 @@ Unirest.firstMatch = function firstMatch (string, map) {
     <li>example usage<pre class="apidocCodePre">...
 
 if (is(options).a(Object)) {
-  if (options[&#x27;content-type&#x27;]) {
-    var type = Unirest.type(options[&#x27;content-type&#x27;], true)
+  if (options['content-type']) {
+    var type = Unirest.type(options['content-type'], true)
     if (type) options.body = Unirest.Response.parse(options.body)
   } else {
     if (is(options.body).a(Object)) {
@@ -6960,13 +6953,13 @@ if (is(options).a(Object)) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">string = function (data) {
   var obj = {}
-  var pairs = data.split(&#x27;&#x26;&#x27;)
+  var pairs = data.split('&amp;')
   var parts
   var pair
 
-  for (var i = 0, len = pairs.length; i &#x3c; len; ++i) {
+  for (var i = 0, len = pairs.length; i &lt; len; ++i) {
     pair = pairs[i]
-    parts = pair.split(&#x27;=&#x27;)
+    parts = pair.split('=')
     obj[decodeURIComponent(parts[0])] = decodeURIComponent(parts[1])
   }
 
@@ -6999,8 +6992,8 @@ if (is(options).a(Object)) {
     <li>example usage<pre class="apidocCodePre">...
 
 if (is(options).a(Object)) {
-  if (options[&#x27;content-type&#x27;]) {
-    var type = Unirest.type(options[&#x27;content-type&#x27;], true)
+  if (options['content-type']) {
+    var type = Unirest.type(options['content-type'], true)
     if (type) options.body = Unirest.Response.parse(options.body)
   } else {
     if (is(options.body).a(Object)) {
@@ -7031,13 +7024,13 @@ if (is(options).a(Object)) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">string = function (data) {
   var obj = {}
-  var pairs = data.split(&#x27;&#x26;&#x27;)
+  var pairs = data.split('&amp;')
   var parts
   var pair
 
-  for (var i = 0, len = pairs.length; i &#x3c; len; ++i) {
+  for (var i = 0, len = pairs.length; i &lt; len; ++i) {
     pair = pairs[i]
-    parts = pair.split(&#x27;=&#x27;)
+    parts = pair.split('=')
     obj[decodeURIComponent(parts[0])] = decodeURIComponent(parts[1])
   }
 
@@ -7123,7 +7116,7 @@ if (is(options).a(Object)) {
         return header.toLowerCase()
       })
 
-      for (var i = 0; i &#x3c; lowercaseHeaders.length; i++) {
+      for (var i = 0; i &lt; lowercaseHeaders.length; i++) {
         if (lowercaseHeaders[i] === name) {
           return headers[i]
         }
@@ -7246,14 +7239,14 @@ if (is(options).a(Object)) {
 Returns a [Request](#request) object with the `method` option set to `PATCH`
 
 ```js
-var Request = unirest.<span class="apidocCodeKeywordSpan">patch</span>(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.<span class="apidocCodeKeywordSpan">patch</span>('http://mockbin.com/request');
 ```
 
 ### delete
 Returns a [Request](#request) object with the `method` option set to `DELETE`
 
 ```js
-var Request = unirest.delete(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.delete('http://mockbin.com/request');
 ...</pre></li>
     </ul>
 
@@ -7334,7 +7327,7 @@ var Request = unirest.delete(&#x27;http://mockbin.com/request&#x27;);
         return header.toLowerCase()
       })
 
-      for (var i = 0; i &#x3c; lowercaseHeaders.length; i++) {
+      for (var i = 0; i &lt; lowercaseHeaders.length; i++) {
         if (lowercaseHeaders[i] === name) {
           return headers[i]
         }
@@ -7454,13 +7447,13 @@ var Request = unirest.delete(&#x27;http://mockbin.com/request&#x27;);
 
 ## Creating Requests
 
-You&#x27;re probably wondering how by using **Unirest** makes creating requests easier. Besides automatically supporting gzip, and
+You're probably wondering how by using **Unirest** makes creating requests easier. Besides automatically supporting gzip, and
  parsing responses, lets start with a basic working example:
 
 ```js
-unirest.<span class="apidocCodeKeywordSpan">post</span>(&#x27;http://mockbin.com/request&#x27;)
-.headers({&#x27;Accept&#x27;: &#x27;application/json&#x27;, &#x27;Content-Type&#x27;: &#x27;application/json&#x27;})
-.send({ &#x22;parameter&#x22;: 23, &#x22;foo&#x22;: &#x22;bar&#x22; })
+unirest.<span class="apidocCodeKeywordSpan">post</span>('http://mockbin.com/request')
+.headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
+.send({ "parameter": 23, "foo": "bar" })
 .end(function (response) {
   console.log(response.body);
 });
@@ -7545,7 +7538,7 @@ unirest.<span class="apidocCodeKeywordSpan">post</span>(&#x27;http://mockbin.com
         return header.toLowerCase()
       })
 
-      for (var i = 0; i &#x3c; lowercaseHeaders.length; i++) {
+      for (var i = 0; i &lt; lowercaseHeaders.length; i++) {
         if (lowercaseHeaders[i] === name) {
           return headers[i]
         }
@@ -7661,21 +7654,21 @@ unirest.<span class="apidocCodeKeywordSpan">post</span>(&#x27;http://mockbin.com
       if (!value.length) return $this
       $this.options.url += (does($this.o ...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var Request = unirest.head(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.head('http://mockbin.com/request');
 ```
 
 ### put
 Returns a [Request](#request) object with the `method` option set to `PUT`
 
 ```js
-var Request = unirest.<span class="apidocCodeKeywordSpan">put</span>(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.<span class="apidocCodeKeywordSpan">put</span>('http://mockbin.com/request');
 ```
 
 ### post
 Returns a [Request](#request) object with the `method` option set to `POST`
 
 ```js
-var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.post('http://mockbin.com/request');
 ...</pre></li>
     </ul>
 
@@ -7694,27 +7687,27 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function request(uri, options, callback) {
-  if (typeof uri === &#x27;undefined&#x27;) {
-    throw new Error(&#x27;undefined is not a valid uri or options object.&#x27;)
+  if (typeof uri === 'undefined') {
+    throw new Error('undefined is not a valid uri or options object.')
   }
 
   var params = initParams(uri, options, callback)
 
-  if (params.method === &#x27;HEAD&#x27; &#x26;&#x26; paramsHaveRequestBody(params)) {
-    throw new Error(&#x27;HTTP HEAD requests MUST NOT include a request body.&#x27;)
+  if (params.method === 'HEAD' &amp;&amp; paramsHaveRequestBody(params)) {
+    throw new Error('HTTP HEAD requests MUST NOT include a request body.')
   }
 
   return new request.Request(params)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-.header(&#x27;Accept&#x27;, &#x27;application/json&#x27;)
+.header('Accept', 'application/json')
 .field({
-  &#x27;parameter&#x27;: &#x27;value&#x27;
+  'parameter': 'value'
 })
 .attach({
-  &#x27;file&#x27;: &#x27;dog.png&#x27;,
-  &#x27;relative file&#x27;: fs.createReadStream(path.join(__dirname, &#x27;dog.png&#x27;)),
-  &#x27;remote file&#x27;: unirest.<span class="apidocCodeKeywordSpan">request</span>(&#x27;http://google.com/doodle.png&#x27;)
+  'file': 'dog.png',
+  'relative file': fs.createReadStream(path.join(__dirname, 'dog.png')),
+  'remote file': unirest.<span class="apidocCodeKeywordSpan">request</span>('http://google.com/doodle.png')
 })
 .end(function (response) {
   console.log(response.body);
@@ -7789,8 +7782,8 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
 
 ```js
 var CookieJar = unirest.jar();
-CookieJar.add(&#x27;key=value&#x27;, &#x27;/&#x27;); // Cookie string, pathname / url
-unirest.get(&#x27;http://mockbin.com/request&#x27;).jar(CookieJar);
+CookieJar.add('key=value', '/'); // Cookie string, pathname / url
+unirest.get('http://mockbin.com/request').jar(CookieJar);
 ```
 
 ## unirest.<span class="apidocCodeKeywordSpan">cookie</span>(String)
@@ -7817,14 +7810,14 @@ Creates a cookie, see above for example.
 
   options = options || {}
 
-  if (typeof options === &#x27;function&#x27;) {
+  if (typeof options === 'function') {
     requester = options
     options = {}
   }
 
   var defaults      = wrapRequestMethod(self, options, requester)
 
-  var verbs = [&#x27;get&#x27;, &#x27;head&#x27;, &#x27;post&#x27;, &#x27;put&#x27;, &#x27;patch&#x27;, &#x27;del&#x27;, &#x27;delete&#x27;]
+  var verbs = ['get', 'head', 'post', 'put', 'patch', 'del', 'delete']
   verbs.forEach(function(verb) {
     defaults[verb]  = wrapRequestMethod(self[verb], options, requester, verb)
   })
@@ -7869,14 +7862,14 @@ Creates a cookie, see above for example.
   return request(params, params.callback)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var Request = unirest.patch(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.patch('http://mockbin.com/request');
 ```
 
 ### delete
 Returns a [Request](#request) object with the `method` option set to `DELETE`
 
 ```js
-var Request = unirest.<span class="apidocCodeKeywordSpan">delete</span>(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.<span class="apidocCodeKeywordSpan">delete</span>('http://mockbin.com/request');
 ```
 
 ## unirest.jar()
@@ -7948,14 +7941,14 @@ When no `callback` is present, the [Request](#request) object will be returned.
 Returns a [Request](#request) object with the `method` option set to `GET`
 
 ```js
-var Request = unirest.<span class="apidocCodeKeywordSpan">get</span>(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.<span class="apidocCodeKeywordSpan">get</span>('http://mockbin.com/request');
 ```
 
 ### head
 Returns a [Request](#request) object with the `method` option set to `HEAD`
 
 ```js
-var Request = unirest.head(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.head('http://mockbin.com/request');
 ...</pre></li>
     </ul>
 
@@ -7974,21 +7967,21 @@ var Request = unirest.head(&#x27;http://mockbin.com/request&#x27;);
   return request(params, params.callback)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var Request = unirest.get(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.get('http://mockbin.com/request');
 ```
 
 ### head
 Returns a [Request](#request) object with the `method` option set to `HEAD`
 
 ```js
-var Request = unirest.<span class="apidocCodeKeywordSpan">head</span>(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.<span class="apidocCodeKeywordSpan">head</span>('http://mockbin.com/request');
 ```
 
 ### put
 Returns a [Request](#request) object with the `method` option set to `PUT`
 
 ```js
-var Request = unirest.put(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.put('http://mockbin.com/request');
 ...</pre></li>
     </ul>
 
@@ -8002,14 +7995,14 @@ var Request = unirest.put(&#x27;http://mockbin.com/request&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function initParams(uri, options, callback) {
-  if (typeof options === &#x27;function&#x27;) {
+  if (typeof options === 'function') {
     callback = options
   }
 
   var params = {}
-  if (typeof options === &#x27;object&#x27;) {
+  if (typeof options === 'object') {
     extend(params, options, {uri: uri})
-  } else if (typeof uri === &#x27;string&#x27;) {
+  } else if (typeof uri === 'string') {
     extend(params, {uri: uri})
   } else {
     extend(params, uri)
@@ -8038,7 +8031,7 @@ var Request = unirest.put(&#x27;http://mockbin.com/request&#x27;);
 Returns a [Request](#request) object with the `method` option set to `DELETE`
 
 ```js
-var Request = unirest.delete(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.delete('http://mockbin.com/request');
 ```
 
 ## unirest.<span class="apidocCodeKeywordSpan">jar</span>()
@@ -8047,8 +8040,8 @@ Creates a container to store multiple cookies, i.e. a cookie jar.
 
 ```js
 var CookieJar = unirest.jar();
-CookieJar.add(&#x27;key=value&#x27;, &#x27;/&#x27;); // Cookie string, pathname / url
-unirest.get(&#x27;http://mockbin.com/request&#x27;).jar(CookieJar);
+CookieJar.add('key=value', '/'); // Cookie string, pathname / url
+unirest.get('http://mockbin.com/request').jar(CookieJar);
 ...</pre></li>
     </ul>
 
@@ -8074,14 +8067,14 @@ unirest.get(&#x27;http://mockbin.com/request&#x27;).jar(CookieJar);
 Returns a [Request](#request) object with the `method` option set to `PATCH`
 
 ```js
-var Request = unirest.<span class="apidocCodeKeywordSpan">patch</span>(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.<span class="apidocCodeKeywordSpan">patch</span>('http://mockbin.com/request');
 ```
 
 ### delete
 Returns a [Request](#request) object with the `method` option set to `DELETE`
 
 ```js
-var Request = unirest.delete(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.delete('http://mockbin.com/request');
 ...</pre></li>
     </ul>
 
@@ -8104,13 +8097,13 @@ var Request = unirest.delete(&#x27;http://mockbin.com/request&#x27;);
 
 ## Creating Requests
 
-You&#x27;re probably wondering how by using **Unirest** makes creating requests easier. Besides automatically supporting gzip, and
+You're probably wondering how by using **Unirest** makes creating requests easier. Besides automatically supporting gzip, and
  parsing responses, lets start with a basic working example:
 
 ```js
-unirest.<span class="apidocCodeKeywordSpan">post</span>(&#x27;http://mockbin.com/request&#x27;)
-.headers({&#x27;Accept&#x27;: &#x27;application/json&#x27;, &#x27;Content-Type&#x27;: &#x27;application/json&#x27;})
-.send({ &#x22;parameter&#x22;: 23, &#x22;foo&#x22;: &#x22;bar&#x22; })
+unirest.<span class="apidocCodeKeywordSpan">post</span>('http://mockbin.com/request')
+.headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
+.send({ "parameter": 23, "foo": "bar" })
 .end(function (response) {
   console.log(response.body);
 });
@@ -8133,21 +8126,21 @@ unirest.<span class="apidocCodeKeywordSpan">post</span>(&#x27;http://mockbin.com
   return request(params, params.callback)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var Request = unirest.head(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.head('http://mockbin.com/request');
 ```
 
 ### put
 Returns a [Request](#request) object with the `method` option set to `PUT`
 
 ```js
-var Request = unirest.<span class="apidocCodeKeywordSpan">put</span>(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.<span class="apidocCodeKeywordSpan">put</span>('http://mockbin.com/request');
 ```
 
 ### post
 Returns a [Request](#request) object with the `method` option set to `POST`
 
 ```js
-var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.post('http://mockbin.com/request');
 ...</pre></li>
     </ul>
 
@@ -8248,7 +8241,7 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
     self.response.destroy()
   }
 
-  self.emit(&#x27;abort&#x27;)
+  self.emit('abort')
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -8307,14 +8300,14 @@ Accepts either an `Object` containing `user`, `pass`, and optionally `sendImmedi
     return self
   }
 
-  if (opts.sign_version == 4 || opts.sign_version == &#x27;4&#x27;) {
+  if (opts.sign_version == 4 || opts.sign_version == '4') {
     // use aws4
     var options = {
       host: self.uri.host,
       path: self.uri.path,
       method: self.method,
       headers: {
-        &#x27;content-type&#x27;: self.getHeader(&#x27;content-type&#x27;) || &#x27;&#x27;
+        'content-type': self.getHeader('content-type') || ''
       },
       body: self.body
     }
@@ -8322,34 +8315,34 @@ Accepts either an `Object` containing `user`, `pass`, and optionally `sendImmedi
       accessKeyId: opts.key,
       secretAccessKey: opts.secret
     })
-    self.setHeader(&#x27;authorization&#x27;, signRes.headers.Authorization)
-    self.setHeader(&#x27;x-amz-date&#x27;, signRes.headers[&#x27;X-Amz-Date&#x27;])
+    self.setHeader('authorization', signRes.headers.Authorization)
+    self.setHeader('x-amz-date', signRes.headers['X-Amz-Date'])
   }
   else {
     // default: use aws-sign2
     var date = new Date()
-    self.setHeader(&#x27;date&#x27;, date.toUTCString())
+    self.setHeader('date', date.toUTCString())
     var auth =
       { key: opts.key
       , secret: opts.secret
       , verb: self.method.toUpperCase()
       , date: date
-      , contentType: self.getHeader(&#x27;content-type&#x27;) || &#x27;&#x27;
-      , md5: self.getHeader(&#x27;content-md5&#x27;) || &#x27;&#x27;
+      , contentType: self.getHeader('content-type') || ''
+      , md5: self.getHeader('content-md5') || ''
       , amazonHeaders: aws2.canonicalizeHeaders(self.headers)
       }
     var path = self.uri.path
-    if (opts.bucket &#x26;&#x26; path) {
-      auth.resource = &#x27;/&#x27; + opts.bucket + path
-    } else if (opts.bucket &#x26;&#x26; !path) {
-      auth.resource = &#x27;/&#x27; + opts.bucket
-    } else if (!opts.bucket &#x26;&#x26; path) {
+    if (opts.bucket &amp;&amp; path) {
+      auth.resource = '/' + opts.bucket + path
+    } else if (opts.bucket &amp;&amp; !path) {
+      auth.resource = '/' + opts.bucket
+    } else if (!opts.bucket &amp;&amp; path) {
       auth.resource = path
-    } else if (!opts.bucket &#x26;&#x26; !path) {
-      auth.resource = &#x27;/&#x27;
+    } else if (!opts.bucket &amp;&amp; !path) {
+      auth.resource = '/'
     }
     auth.resource = aws2.canonicalizeResource(auth.resource)
-    self.setHeader(&#x27;authorization&#x27;, aws2.authorization(auth))
+    self.setHeader('authorization', aws2.authorization(auth))
   }
 
   return self
@@ -8383,7 +8376,7 @@ Accepts either an `Object` containing `user`, `pass`, and optionally `sendImmedi
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function debug() {
   if (Request.debug) {
-    console.error(&#x27;REQUEST %s&#x27;, util.format.apply(util, arguments))
+    console.error('REQUEST %s', util.format.apply(util, arguments))
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -8419,8 +8412,8 @@ Accepts either an `Object` containing `user`, `pass`, and optionally `sendImmedi
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">enableUnixSocket = function () {
-  // Get the socket &#x26; request paths from the URL
-  var unixParts = this.uri.path.split(&#x27;:&#x27;)
+  // Get the socket &amp; request paths from the URL
+  var unixParts = this.uri.path.split(':')
     , host = unixParts[0]
     , path = unixParts[1]
   // Apply unix properties to request
@@ -8459,13 +8452,13 @@ Accepts either an `Object` containing `user`, `pass`, and optionally `sendImmedi
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-You&#x27;re probably wondering how by using **Unirest** makes creating requests easier. Besides automatically supporting gzip, and
+You're probably wondering how by using **Unirest** makes creating requests easier. Besides automatically supporting gzip, and
  parsing responses, lets start with a basic working example:
 
 ```js
-unirest.post(&#x27;http://mockbin.com/request&#x27;)
-.headers({&#x27;Accept&#x27;: &#x27;application/json&#x27;, &#x27;Content-Type&#x27;: &#x27;application/json&#x27;})
-.send({ &#x22;parameter&#x22;: 23, &#x22;foo&#x22;: &#x22;bar&#x22; })
+unirest.post('http://mockbin.com/request')
+.headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
+.send({ "parameter": 23, "foo": "bar" })
 .<span class="apidocCodeKeywordSpan">end</span>(function (response) {
   console.log(response.body);
 });
@@ -8489,19 +8482,19 @@ Transferring file data has been simplified:
     <li>description and source-code<pre class="apidocCodePre">form = function (form) {
   var self = this
   if (form) {
-    if (!/^application\/x-www-form-urlencoded\b/.test(self.getHeader(&#x27;content-type&#x27;))) {
-      self.setHeader(&#x27;content-type&#x27;, &#x27;application/x-www-form-urlencoded&#x27;)
+    if (!/^application\/x-www-form-urlencoded\b/.test(self.getHeader('content-type'))) {
+      self.setHeader('content-type', 'application/x-www-form-urlencoded')
     }
-    self.body = (typeof form === &#x27;string&#x27;)
-      ? self._qs.rfc3986(form.toString(&#x27;utf8&#x27;))
-      : self._qs.stringify(form).toString(&#x27;utf8&#x27;)
+    self.body = (typeof form === 'string')
+      ? self._qs.rfc3986(form.toString('utf8'))
+      : self._qs.stringify(form).toString('utf8')
     return self
   }
   // create form-data object
   self._form = new FormData()
-  self._form.on(&#x27;error&#x27;, function(err) {
-    err.message = &#x27;form-data: &#x27; + err.message
-    self.emit(&#x27;error&#x27;, err)
+  self._form.on('error', function(err) {
+    err.message = 'form-data: ' + err.message
+    self.emit('error', err)
     self.abort()
   })
   return self._form
@@ -8511,7 +8504,7 @@ Transferring file data has been simplified:
 Sets `method` value on `Request.options` to the given value.
 
 ```js
-Request.method(&#x27;HEAD&#x27;);
+Request.method('HEAD');
 ```
 
 #### Request.<span class="apidocCodeKeywordSpan">form</span>(Object)
@@ -8545,7 +8538,7 @@ Request.form({
     if (key.length !== name.length) {
       return
     }
-    re = new RegExp(name, &#x27;i&#x27;)
+    re = new RegExp(name, 'i')
     match = key.match(re)
     if (match) {
       result = headers[key]
@@ -8586,11 +8579,11 @@ Request.form({
   if (self.secureOptions) {
     options.secureOptions = self.secureOptions
   }
-  if (typeof self.rejectUnauthorized !== &#x27;undefined&#x27;) {
+  if (typeof self.rejectUnauthorized !== 'undefined') {
     options.rejectUnauthorized = self.rejectUnauthorized
   }
 
-  if (self.cert &#x26;&#x26; self.key) {
+  if (self.cert &amp;&amp; self.key) {
     options.key = self.key
     options.cert = self.cert
   }
@@ -8603,7 +8596,7 @@ Request.form({
     options.passphrase = self.passphrase
   }
 
-  var poolKey = &#x27;&#x27;
+  var poolKey = ''
 
   // different types of agents are in different pools
   if (Agent !== self.httpModule.Agent) {
@@ -8612,68 +8605,68 @@ Request.form({
 
   // ca option is only relevant if proxy or destination are https
   var proxy = self.proxy
-  if (typeof proxy === &#x27;string&#x27;) {
+  if (typeof proxy === 'string') {
     proxy = url.parse(proxy)
   }
-  var isHttps = (proxy &#x26;&#x26; proxy.protocol === &#x27;https:&#x27;) || this.uri.protocol === &#x27;https:&#x27;
+  var isHttps = (proxy &amp;&amp; proxy.protocol === 'https:') || this.uri.protocol === 'https:'
 
   if (isHttps) {
     if (options.ca) {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
       poolKey += options.ca
     }
 
-    if (typeof options.rejectUnauthorized !== &#x27;undefined&#x27;) {
+    if (typeof options.rejectUnauthorized !== 'undefined') {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
       poolKey += options.rejectUnauthorized
     }
 
     if (options.cert) {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
-      poolKey += options.cert.toString(&#x27;ascii&#x27;) + options.key.toString(&#x27;ascii&#x27;)
+      poolKey += options.cert.toString('ascii') + options.key.toString('ascii')
     }
 
     if (options.pfx) {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
-      poolKey += options.pfx.toString(&#x27;ascii&#x27;)
+      poolKey += options.pfx.toString('ascii')
     }
 
     if (options.ciphers) {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
       poolKey += options.ciphers
     }
 
     if (options.secureProtocol) {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
       poolKey += options.secureProtocol
     }
 
     if (options.secureOptions) {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
       poolKey += options.secureOptions
     }
   }
 
-  if (self.pool === globalPool &#x26;&#x26; !poolKey &#x26;&#x26; Object.keys(options).length === 0 &#x26;&#x26; self.httpModule.globalAgent) {
+  if (self.pool === globalPool &amp;&amp; !poolKey &amp;&amp; Object.keys(options).length === 0 &amp;&amp; self.httpModule.globalAgent) {
     // not doing anything special.  Use the globalAgent
     return self.httpModule.globalAgent
   }
 
-  // we&#x27;re using a stored agent.  Make sure it&#x27;s protocol-specific
+  // we're using a stored agent.  Make sure it's protocol-specific
   poolKey = self.uri.protocol + poolKey
 
   // generate a new agent for this setting if none yet exists
@@ -8701,7 +8694,7 @@ Request.form({
     <ul>
     <li>description and source-code<pre class="apidocCodePre">hawk = function (opts) {
   var self = this
-  self.setHeader(&#x27;Authorization&#x27;, hawk.client.header(self.uri, self.method, opts).field)
+  self.setHeader('Authorization', hawk.client.header(self.uri, self.method, opts).field)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 * `followRedirect` (`Boolean`) - Default `true`; Follow HTTP `3xx` responses as redirects.
@@ -8743,7 +8736,7 @@ Request.form({
     method: self.method,
     path: self.path
   }, opts)
-  debug(&#x27;httpSignature authorization&#x27;, self.getHeader(&#x27;authorization&#x27;))
+  debug('httpSignature authorization', self.getHeader('authorization'))
 
   return self
 }</pre></li>
@@ -8788,7 +8781,7 @@ Request.form({
   // Delete headers with value undefined since they break
   // ClientRequest.OutgoingMessage.setHeader in node 0.12
   for (var headerName in self.headers) {
-    if (typeof self.headers[headerName] === &#x27;undefined&#x27;) {
+    if (typeof self.headers[headerName] === 'undefined') {
       delete self.headers[headerName]
     }
   }
@@ -8796,7 +8789,7 @@ Request.form({
   caseless.httpify(self, self.headers)
 
   if (!self.method) {
-    self.method = options.method || &#x27;GET&#x27;
+    self.method = options.method || 'GET'
   }
   if (!self.localAddress) {
     self.localAddress = options.localAddress
@@ -8805,14 +8798,14 @@ Request.form({
   self._qs.init(options)
 
   debug(options)
-  if (!self.pool &#x26;&#x26; self.pool !== false) {
+  if (!self.pool &amp;&amp; self.pool !== false) {
     self.pool = globalPool
   }
   self.dests = self.dests || []
   self.__isRequestRequest = true
 
   // Protect against double callback
-  if (!self._callback &#x26;&#x26; self.callback) {
+  if (!self._callback &amp;&amp; self.callback) {
     self._callback = self.callback
     self.callback = function () {
       if (self._callbackCalled) {
@@ -8821,55 +8814,55 @@ Request.form({
       self._callbackCalled = true
       self._callback.apply(self, arguments)
     }
-    self.on(&#x27;error&#x27;, self.callback.bind())
-    self.on(&#x27;complete&#x27;, self.callback.bind(self, null))
+    self.on('error', self.callback.bind())
+    self.on('complete', self.callback.bind(self, null))
   }
 
   // People use this property instead all the time, so support it
-  if (!self.uri &#x26;&#x26; self.url) {
+  if (!self.uri &amp;&amp; self.url) {
     self.uri = self.url
     delete self.url
   }
 
-  // If there&#x27;s a baseUrl, then use it as the base URL (i.e. uri must be
+  // If there's a baseUrl, then use it as the base URL (i.e. uri must be
   // specified as a relative path and is appended to baseUrl).
   if (self.baseUrl) {
-    if (typeof self.baseUrl !== &#x27;string&#x27;) {
-      return self.emit(&#x27;error&#x27;, new Error(&#x27;options.baseUrl must be a string&#x27;))
+    if (typeof self.baseUrl !== 'string') {
+      return self.emit('error', new Error('options.baseUrl must be a string'))
     }
 
-    if (typeof self.uri !== &#x27;string&#x27;) {
-      return self.emit(&#x27;error&#x27;, new Error(&#x27;options.uri must be a string when using options.baseUrl&#x27;))
+    if (typeof self.uri !== 'string') {
+      return self.emit('error', new Error('options.uri must be a string when using options.baseUrl'))
     }
 
-    if (self.uri.indexOf(&#x27;//&#x27;) === 0 || self.uri.indexOf(&#x27;://&#x27;) !== -1) {
-      return self.emit(&#x27;error&#x27;, new Error(&#x27;options.uri must be a path when using options.baseUrl&#x27;))
+    if (self.uri.indexOf('//') === 0 || self.uri.indexOf('://') !== -1) {
+      return self.emit('error', new Error('options.uri must be a path when using options.baseUrl'))
     }
 
-    // Handle all cases to make sure that there&#x27;s only one slash between
+    // Handle all cases to make sure that there's only one slash between
     // baseUrl and uri.
-    var baseUrlEndsWithSlash = self.baseUrl.lastIndexOf(&#x27;/&#x27;) === self.baseUrl.length - 1
-    var uriStartsWithSlash = self.uri.indexOf(&#x27;/&#x27;) === 0
+    var baseUrlEndsWithSlash = self.baseUrl.lastIndexOf('/') === self.baseUrl.length - 1
+    var uriStartsWithSlash = self.uri.indexOf('/') === 0
 
-    if (baseUrlEndsWithSlash &#x26;&#x26; uriStartsWithSlash) {
+    if (baseUrlEndsWithSlash &amp;&amp; uriStartsWithSlash) {
       self.uri = self.baseUrl + self.uri.slice(1)
     } else if (baseUrlEndsWithSlash || uriStartsWithSlash) {
       self.uri = self.baseUrl + self.uri
-    } else if (self.uri === &#x27;&#x27;) {
+    } else if (self.uri === '') {
       self.uri = self.baseUrl
     } else {
-      self.uri = self.baseUrl + &#x27;/&#x27; + self.uri
+      self.uri = self.baseUrl + '/' + self.uri
     }
     delete self.baseUrl
   }
 
-  // A URI is needed by this point, emit error if we haven&#x27;t been able to get one
+  // A URI is needed by this point, emit error if we haven't been able to get one
   if (!self.uri) {
-    return self.emit(&#x27;error&#x27;, new Error(&#x27;options.uri is a required argument&#x27;))
+    return self.emit('error', new Error('options.uri is a required argument'))
   }
 
   // If a string URI/URL was given, parse it into a URL object
-  if (typeof self.uri === &#x27;string&#x27;) {
+  if (typeof self.uri === 'string') {
     self.uri = url.parse(self.uri)
   }
 
@@ -8879,13 +8872,13 @@ Request.form({
   }
 
   // DEPRECATED: Warning for users of the old Unix Sockets URL Scheme
-  if (self.uri.protocol === &#x27;unix:&#x27;) {
-    return self.emit(&#x27;error&#x27;, new Error(&#x27;`unix://` URL scheme is no longer supported. Please use the format `http://unix:SOCKET:
-PATH`&#x27;))
+  if (self.uri.protocol === 'unix:') {
+    return self.emit('error', new Error('`unix://` URL scheme is no longer supported. Please use the format `http://unix:SOCKET:
+PATH`'))
   }
 
   // Support Unix Sockets
-  if (self.uri.host === &#x27;unix&#x27;) {
+  if (self.uri.host === 'unix') {
     self.enableUnixSocket()
   }
 
@@ -8893,13 +8886,13 @@ PATH`&#x27;))
     self.rejectUnauthorized = false
   }
 
-  if (!self.uri.pathname) {self.uri.pathname = &#x27;/&#x27;}
+  if (!self.uri.pathname) {self.uri.pathname = '/'}
 
-  if (!(self.uri.host || (self.uri.hostname &#x26;&#x26; self.uri.port)) &#x26;&#x26; !self.uri.isUnix) {
-    // Invalid URI: it may generate lot of bad errors, like &#x27;TypeError: Cannot call method `indexOf` of undefined&#x27; in CookieJar
+  if (!(self.uri.host || (self.uri.hostname &amp;&amp; self.uri.port)) &amp;&amp; !self.uri.isUnix) {
+    // Invalid URI: it may generate lot of bad errors, like 'TypeError: Cannot call method `indexOf` of undefined' in CookieJar
     // Detect and reject it as soon as possible
     var faultyUri = url.format(self.uri)
-    var message = &#x27;Invalid URI &#x22;&#x27; + faultyUri + &#x27;&#x22;&#x27;
+    var message = 'Invalid URI "' + faultyUri + '"'
     if (Object.keys(options). ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -8918,7 +8911,7 @@ PATH`&#x27;))
   var cookies
 
   if (self._redirect.redirectsFollowed === 0) {
-    self.originalCookieHeader = self.getHeader(&#x27;cookie&#x27;)
+    self.originalCookieHeader = self.getHeader('cookie')
   }
 
   if (!jar) {
@@ -8926,7 +8919,7 @@ PATH`&#x27;))
     cookies = false
     self._disableCookies = true
   } else {
-    var targetCookieJar = (jar &#x26;&#x26; jar.getCookieString) ? jar : globalCookieJar
+    var targetCookieJar = (jar &amp;&amp; jar.getCookieString) ? jar : globalCookieJar
     var urihref = self.uri.href
     //fetch cookie in the Specified host
     if (targetCookieJar) {
@@ -8935,12 +8928,12 @@ PATH`&#x27;))
   }
 
   //if need cookie and cookie is not empty
-  if (cookies &#x26;&#x26; cookies.length) {
+  if (cookies &amp;&amp; cookies.length) {
     if (self.originalCookieHeader) {
-      // Don&#x27;t overwrite existing Cookie header
-      self.setHeader(&#x27;cookie&#x27;, self.originalCookieHeader + &#x27;; &#x27; + cookies)
+      // Don't overwrite existing Cookie header
+      self.setHeader('cookie', self.originalCookieHeader + '; ' + cookies)
     } else {
-      self.setHeader(&#x27;cookie&#x27;, cookies)
+      self.setHeader('cookie', cookies)
     }
   }
   self._jar = jar
@@ -8951,7 +8944,7 @@ PATH`&#x27;))
 Returns a [Request](#request) object with the `method` option set to `DELETE`
 
 ```js
-var Request = unirest.delete(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.delete('http://mockbin.com/request');
 ```
 
 ## unirest.<span class="apidocCodeKeywordSpan">jar</span>()
@@ -8960,8 +8953,8 @@ Creates a container to store multiple cookies, i.e. a cookie jar.
 
 ```js
 var CookieJar = unirest.jar();
-CookieJar.add(&#x27;key=value&#x27;, &#x27;/&#x27;); // Cookie string, pathname / url
-unirest.get(&#x27;http://mockbin.com/request&#x27;).jar(CookieJar);
+CookieJar.add('key=value', '/'); // Cookie string, pathname / url
+unirest.get('http://mockbin.com/request').jar(CookieJar);
 ...</pre></li>
     </ul>
 
@@ -8977,34 +8970,34 @@ unirest.get(&#x27;http://mockbin.com/request&#x27;).jar(CookieJar);
     <li>description and source-code<pre class="apidocCodePre">json = function (val) {
   var self = this
 
-  if (!self.hasHeader(&#x27;accept&#x27;)) {
-    self.setHeader(&#x27;accept&#x27;, &#x27;application/json&#x27;)
+  if (!self.hasHeader('accept')) {
+    self.setHeader('accept', 'application/json')
   }
 
-  if (typeof self.jsonReplacer === &#x27;function&#x27;) {
+  if (typeof self.jsonReplacer === 'function') {
     self._jsonReplacer = self.jsonReplacer
   }
 
   self._json = true
-  if (typeof val === &#x27;boolean&#x27;) {
+  if (typeof val === 'boolean') {
     if (self.body !== undefined) {
-      if (!/^application\/x-www-form-urlencoded\b/.test(self.getHeader(&#x27;content-type&#x27;))) {
+      if (!/^application\/x-www-form-urlencoded\b/.test(self.getHeader('content-type'))) {
         self.body = safeStringify(self.body, self._jsonReplacer)
       } else {
         self.body = self._qs.rfc3986(self.body)
       }
-      if (!self.hasHeader(&#x27;content-type&#x27;)) {
-        self.setHeader(&#x27;content-type&#x27;, &#x27;application/json&#x27;)
+      if (!self.hasHeader('content-type')) {
+        self.setHeader('content-type', 'application/json')
       }
     }
   } else {
     self.body = safeStringify(val, self._jsonReplacer)
-    if (!self.hasHeader(&#x27;content-type&#x27;)) {
-      self.setHeader(&#x27;content-type&#x27;, &#x27;application/json&#x27;)
+    if (!self.hasHeader('content-type')) {
+      self.setHeader('content-type', 'application/json')
     }
   }
 
-  if (typeof self.jsonReviver === &#x27;function&#x27;) {
+  if (typeof self.jsonReviver === 'function') {
     self._jsonReviver = self.jsonReviver
   }
 
@@ -9013,8 +9006,8 @@ unirest.get(&#x27;http://mockbin.com/request&#x27;).jar(CookieJar);
     <li>example usage<pre class="apidocCodePre">...
 
 if (is(options).a(Object)) {
-  if (options[&#x27;content-type&#x27;]) {
-    var type = Unirest.type(options[&#x27;content-type&#x27;], true)
+  if (options['content-type']) {
+    var type = Unirest.type(options['content-type'], true)
     if (type) options.body = Unirest.Response.parse(options.body)
   } else {
     if (is(options.body).a(Object)) {
@@ -9050,7 +9043,7 @@ if (is(options).a(Object)) {
   return self
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-Request.header(&#x27;Accept&#x27;, &#x27;application/json&#x27;);
+Request.header('Accept', 'application/json');
 ```
 
 #### Request.part(Object)
@@ -9064,8 +9057,8 @@ Each object is then appended to the `Request.options.multipart` array.
 
 ```js
 Request.part({
-&#x27;content-type&#x27;: &#x27;application/json&#x27;,
-body: { foo: &#x27;bar&#x27; }
+'content-type': 'application/json',
+body: { foo: 'bar' }
 ...</pre></li>
     </ul>
 
@@ -9118,18 +9111,18 @@ body: { foo: &#x27;bar&#x27; }
   if (self._aborted) {
     return
   }
-  if (self.req &#x26;&#x26; self.req._reusedSocket &#x26;&#x26; error.code === &#x27;ECONNRESET&#x27;
-      &#x26;&#x26; self.agent.addRequestNoreuse) {
+  if (self.req &amp;&amp; self.req._reusedSocket &amp;&amp; error.code === 'ECONNRESET'
+      &amp;&amp; self.agent.addRequestNoreuse) {
     self.agent = { addRequest: self.agent.addRequestNoreuse.bind(self.agent) }
     self.start()
     self.req.end()
     return
   }
-  if (self.timeout &#x26;&#x26; self.timeoutTimer) {
+  if (self.timeout &amp;&amp; self.timeoutTimer) {
     clearTimeout(self.timeoutTimer)
     self.timeoutTimer = null
   }
-  self.emit(&#x27;error&#x27;, error)
+  self.emit('error', error)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -9145,18 +9138,18 @@ body: { foo: &#x27;bar&#x27; }
     <ul>
     <li>description and source-code<pre class="apidocCodePre">onRequestResponse = function (response) {
   var self = this
-  debug(&#x27;onRequestResponse&#x27;, self.uri.href, response.statusCode, response.headers)
-  response.on(&#x27;end&#x27;, function() {
+  debug('onRequestResponse', self.uri.href, response.statusCode, response.headers)
+  response.on('end', function() {
     if (self.timing) {
       self.elapsedTime += (new Date().getTime() - self.startTime)
-      debug(&#x27;elapsed time&#x27;, self.elapsedTime)
+      debug('elapsed time', self.elapsedTime)
       response.elapsedTime = self.elapsedTime
     }
-    debug(&#x27;response end&#x27;, self.uri.href, response.statusCode, response.headers)
+    debug('response end', self.uri.href, response.statusCode, response.headers)
   })
 
   if (self._aborted) {
-    debug(&#x27;aborted&#x27;, self.uri.href)
+    debug('aborted', self.uri.href)
     response.resume()
     return
   }
@@ -9166,13 +9159,13 @@ body: { foo: &#x27;bar&#x27; }
   response.toJSON = responseToJSON
 
   // XXX This is different on 0.10, because SSL is strict by default
-  if (self.httpModule === https &#x26;&#x26;
-      self.strictSSL &#x26;&#x26; (!response.hasOwnProperty(&#x27;socket&#x27;) ||
+  if (self.httpModule === https &amp;&amp;
+      self.strictSSL &amp;&amp; (!response.hasOwnProperty('socket') ||
       !response.socket.authorized)) {
-    debug(&#x27;strict ssl error&#x27;, self.uri.href)
-    var sslErr = response.hasOwnProperty(&#x27;socket&#x27;) ? response.socket.authorizationError : self.uri.href + &#x27; does not support SSL
-&#x27;
-    self.emit(&#x27;error&#x27;, new Error(&#x27;SSL Error: &#x27; + sslErr))
+    debug('strict ssl error', self.uri.href)
+    var sslErr = response.hasOwnProperty('socket') ? response.socket.authorizationError : self.uri.href + ' does not support SSL
+'
+    self.emit('error', new Error('SSL Error: ' + sslErr))
     return
   }
 
@@ -9180,32 +9173,32 @@ body: { foo: &#x27;bar&#x27; }
   // remove any authorization headers).  Also remember the case of the header
   // name because lots of broken servers expect Host instead of host and we
   // want the caller to be able to specify this.
-  self.originalHost = self.getHeader(&#x27;host&#x27;)
+  self.originalHost = self.getHeader('host')
   if (!self.originalHostHeaderName) {
-    self.originalHostHeaderName = self.hasHeader(&#x27;host&#x27;)
+    self.originalHostHeaderName = self.hasHeader('host')
   }
   if (self.setHost) {
-    self.removeHeader(&#x27;host&#x27;)
+    self.removeHeader('host')
   }
-  if (self.timeout &#x26;&#x26; self.timeoutTimer) {
+  if (self.timeout &amp;&amp; self.timeoutTimer) {
     clearTimeout(self.timeoutTimer)
     self.timeoutTimer = null
   }
 
-  var targetCookieJar = (self._jar &#x26;&#x26; self._jar.setCookie) ? self._jar : globalCookieJar
+  var targetCookieJar = (self._jar &amp;&amp; self._jar.setCookie) ? self._jar : globalCookieJar
   var addCookie = function (cookie) {
-    //set the cookie if it&#x27;s domain in the href&#x27;s domain.
+    //set the cookie if it's domain in the href's domain.
     try {
       targetCookieJar.setCookie(cookie, self.uri.href, {ignoreError: true})
     } catch (e) {
-      self.emit(&#x27;error&#x27;, e)
+      self.emit('error', e)
     }
   }
 
   response.caseless = caseless(response.headers)
 
-  if (response.caseless.has(&#x27;set-cookie&#x27;) &#x26;&#x26; (!self._disableCookies)) {
-    var headerName = response.caseless.has(&#x27;set-cookie&#x27;)
+  if (response.caseless.has('set-cookie') &amp;&amp; (!self._disableCookies)) {
+    var headerName = response.caseless.has('set-cookie')
     if (Array.isArray(response.headers[headerName])) {
       response.headers[headerName].forEach(addCookie)
     } else {
@@ -9218,21 +9211,21 @@ body: { foo: &#x27;bar&#x27; }
   } else {
     // Be a good stream and emit end when the response is finished.
     // Hack to emit end on close because of a core bug that never fires end
-    response.on(&#x27;close&#x27;, function () {
+    response.on('close', function () {
       if (!self._ended) {
-        self.response.emit(&#x27;end&#x27;)
+        self.response.emit('end')
       }
     })
 
-    response.on(&#x27;end&#x27;, function () {
+    response.on('end', function () {
       self._ended = true
     })
 
     var noBody = function (code) {
       return (
-        self.method === &#x27;HEAD&#x27;
+        self.method === 'HEAD'
         // Informational
-        || (code &#x3e;= 100 &#x26;&#x26; code &#x3c; 200)
+        || (code &gt;= 100 &amp;&amp; code &lt; 200)
         // No Content
         || code === 204
         // Not Modified
@@ -9241,21 +9234,21 @@ body: { foo: &#x27;bar&#x27; }
     }
 
     var responseContent
-    if (self.gzip &#x26;&#x26; !noBody(response.statusCode)) {
-      var contentEncoding = response.headers[&#x27;content-encoding&#x27;] || &#x27;identity&#x27;
+    if (self.gzip &amp;&amp; !noBody(response.statusCode)) {
+      var contentEncoding = response.headers['content-encoding'] || 'identity'
       contentEncoding = contentEncoding.trim().toLowerCase()
 
-      if (contentEncoding === &#x27;gzip&#x27;) {
+      if (contentEncoding === 'gzip') {
         responseContent = zlib.createGunzip()
         response.pipe(responseContent)
-      } else if (contentEncoding === &#x27;deflate&#x27;) {
+      } else if (contentEncoding === 'deflate') {
         responseContent = zlib.createInflate()
         response.pipe(responseContent)
       } else {
-        // Since previous versions didn&#x27;t check for Content-Encoding header,
+        // Since previous versions didn't check for Content-Encoding header,
         // ignore any invalid values to preserve backwards-compatibility
-        if (contentEncoding !== &#x27;identity&#x27;) {
-          debug(&#x27;ignoring unrecognized Content-Encoding &#x27; + contentEncoding)
+        if (contentEncoding !== 'identity') {
+          debug('ignoring unrecognized Content-Encoding ' + contentEncoding)
         }
         responseContent = response
       }
@@ -9265,7 +9258,7 @@ body: { foo: &#x27;bar&#x27; }
 
     if (self.encoding) {
       if (self.dests.length !== 0) {
-        console.error(&#x27;Ignoring encoding parameter as this stream is being piped to another stream which makes the encoding opti ...</pre></li>
+        console.error('Ignoring encoding parameter as this stream is being piped to another stream which makes the encoding opti ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -9303,9 +9296,9 @@ body: { foo: &#x27;bar&#x27; }
 
   if (self.response) {
     if (self._destdata) {
-      self.emit(&#x27;error&#x27;, new Error(&#x27;You cannot pipe after data has been emitted from the response.&#x27;))
+      self.emit('error', new Error('You cannot pipe after data has been emitted from the response.'))
     } else if (self._ended) {
-      self.emit(&#x27;error&#x27;, new Error(&#x27;You cannot pipe after the response has been ended.&#x27;))
+      self.emit('error', new Error('You cannot pipe after the response has been ended.'))
     } else {
       stream.Stream.prototype.pipe.call(self, dest, opts)
       self.pipeDest(dest)
@@ -9321,7 +9314,7 @@ body: { foo: &#x27;bar&#x27; }
     return
   }
 
-  stream.emit(&#x27;error&#x27;, error)
+  stream.emit('error', error)
 })
 
 // Start the processing
@@ -9349,9 +9342,9 @@ response.setEncoding = function (type) {
   var self = this
   var response = self.response
   // Called after the response is received
-  if (dest.headers &#x26;&#x26; !dest.headersSent) {
-    if (response.caseless.has(&#x27;content-type&#x27;)) {
-      var ctname = response.caseless.has(&#x27;content-type&#x27;)
+  if (dest.headers &amp;&amp; !dest.headersSent) {
+    if (response.caseless.has('content-type')) {
+      var ctname = response.caseless.has('content-type')
       if (dest.setHeader) {
         dest.setHeader(ctname, response.headers[ctname])
       }
@@ -9360,8 +9353,8 @@ response.setEncoding = function (type) {
       }
     }
 
-    if (response.caseless.has(&#x27;content-length&#x27;)) {
-      var clname = response.caseless.has(&#x27;content-length&#x27;)
+    if (response.caseless.has('content-length')) {
+      var clname = response.caseless.has('content-length')
       if (dest.setHeader) {
         dest.setHeader(clname, response.headers[clname])
       } else {
@@ -9369,11 +9362,11 @@ response.setEncoding = function (type) {
       }
     }
   }
-  if (dest.setHeader &#x26;&#x26; !dest.headersSent) {
+  if (dest.setHeader &amp;&amp; !dest.headersSent) {
     for (var i in response.headers) {
       // If the response content is being decoded, the Content-Encoding header
-      // of the response doesn&#x27;t represent the piped content, so don&#x27;t pass it.
-      if (!self.gzip || i !== &#x27;content-encoding&#x27;) {
+      // of the response doesn't represent the piped content, so don't pass it.
+      if (!self.gzip || i !== 'content-encoding') {
         dest.setHeader(i, response.headers[i])
       }
     }
@@ -9398,7 +9391,7 @@ response.setEncoding = function (type) {
     <li>description and source-code<pre class="apidocCodePre">qs = function (q, clobber) {
   var self = this
   var base
-  if (!clobber &#x26;&#x26; self.uri.query) {
+  if (!clobber &amp;&amp; self.uri.query) {
     base = self._qs.parse(self.uri.query)
   } else {
     base = {}
@@ -9410,15 +9403,15 @@ response.setEncoding = function (type) {
 
   var qs = self._qs.stringify(base)
 
-  if (qs === &#x27;&#x27;) {
+  if (qs === '') {
     return self
   }
 
-  self.uri = url.parse(self.uri.href.split(&#x27;?&#x27;)[0] + &#x27;?&#x27; + qs)
+  self.uri = url.parse(self.uri.href.split('?')[0] + '?' + qs)
   self.url = self.uri
   self.path = self.uri.path
 
-  if (self.uri.host === &#x27;unix&#x27;) {
+  if (self.uri.host === 'unix') {
     self.enableUnixSocket()
   }
 
@@ -9438,21 +9431,21 @@ response.setEncoding = function (type) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">readResponseBody = function (response) {
   var self = this
-  debug(&#x27;reading response\&#x27;s body&#x27;)
+  debug('reading response\'s body')
   var buffer = bl()
     , strings = []
 
-  self.on(&#x27;data&#x27;, function (chunk) {
+  self.on('data', function (chunk) {
     if (Buffer.isBuffer(chunk)) {
       buffer.append(chunk)
     } else {
       strings.push(chunk)
     }
   })
-  self.on(&#x27;end&#x27;, function () {
-    debug(&#x27;end event&#x27;, self.uri.href)
+  self.on('end', function () {
+    debug('end event', self.uri.href)
     if (self._aborted) {
-      debug(&#x27;aborted&#x27;, self.uri.href)
+      debug('aborted', self.uri.href)
       // `buffer` is defined in the parent scope and used in a closure it exists for the life of the request.
       // This can lead to leaky behavior if the user retains a reference to the request object.
       buffer.destroy()
@@ -9460,10 +9453,10 @@ response.setEncoding = function (type) {
     }
 
     if (buffer.length) {
-      debug(&#x27;has body&#x27;, self.uri.href, buffer.length)
+      debug('has body', self.uri.href, buffer.length)
       if (self.encoding === null) {
         // response.body = buffer
-        // can&#x27;t move to this until https://github.com/rvagg/bl/issues/13
+        // can't move to this until https://github.com/rvagg/bl/issues/13
         response.body = buffer.slice()
       } else {
         response.body = buffer.toString(self.encoding)
@@ -9473,26 +9466,26 @@ response.setEncoding = function (type) {
       buffer.destroy()
     } else if (strings.length) {
       // The UTF8 BOM [0xEF,0xBB,0xBF] is converted to [0xFE,0xFF] in the JS UTC16/UCS2 representation.
-      // Strip this value out when the encoding is set to &#x27;utf8&#x27;, as upstream consumers won&#x27;t expect it and it breaks JSON.parse
+      // Strip this value out when the encoding is set to 'utf8', as upstream consumers won't expect it and it breaks JSON.parse
 ().
-      if (self.encoding === &#x27;utf8&#x27; &#x26;&#x26; strings[0].length &#x3e; 0 &#x26;&#x26; strings[0][0] === &#x27;\uFEFF&#x27;) {
+      if (self.encoding === 'utf8' &amp;&amp; strings[0].length &gt; 0 &amp;&amp; strings[0][0] === '\uFEFF') {
         strings[0] = strings[0].substring(1)
       }
-      response.body = strings.join(&#x27;&#x27;)
+      response.body = strings.join('')
     }
 
     if (self._json) {
       try {
         response.body = JSON.parse(response.body, self._jsonReviver)
       } catch (e) {
-        debug(&#x27;invalid JSON received&#x27;, self.uri.href)
+        debug('invalid JSON received', self.uri.href)
       }
     }
-    debug(&#x27;emitting complete&#x27;, self.uri.href)
-    if (typeof response.body === &#x27;undefined&#x27; &#x26;&#x26; !self._json) {
-      response.body = self.encoding === null ? new Buffer(0) : &#x27;&#x27;
+    debug('emitting complete', self.uri.href)
+    if (typeof response.body === 'undefined' &amp;&amp; !self._json) {
+      response.body = self.encoding === null ? new Buffer(0) : ''
     }
-    self.emit(&#x27;complete&#x27;, response, response.body)
+    self.emit('complete', response, response.body)
   })
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -9519,7 +9512,7 @@ response.setEncoding = function (type) {
 }
 
 if (!response.body) {
-  response.body = &#x27;&#x27;
+  response.body = ''
 }
 
 // Node 10+
@@ -9529,8 +9522,8 @@ response.<span class="apidocCodeKeywordSpan">resume</span>()
 handleGZIPResponse(response)
 
 // Fallback
-response.on(&#x27;data&#x27;, function (chunk) {
-  if (typeof chunk === &#x27;string&#x27;) response.body += chunk
+response.on('data', function (chunk) {
+  if (typeof chunk === 'string') response.body += chunk
 ...</pre></li>
     </ul>
 
@@ -9553,27 +9546,27 @@ response.on(&#x27;data&#x27;, function (chunk) {
   }
 
   self._started = true
-  self.method = self.method || &#x27;GET&#x27;
+  self.method = self.method || 'GET'
   self.href = self.uri.href
 
-  if (self.src &#x26;&#x26; self.src.stat &#x26;&#x26; self.src.stat.size &#x26;&#x26; !self.hasHeader(&#x27;content-length&#x27;)) {
-    self.setHeader(&#x27;content-length&#x27;, self.src.stat.size)
+  if (self.src &amp;&amp; self.src.stat &amp;&amp; self.src.stat.size &amp;&amp; !self.hasHeader('content-length')) {
+    self.setHeader('content-length', self.src.stat.size)
   }
   if (self._aws) {
     self.aws(self._aws, true)
   }
 
   // We have a method named auth, which is completely different from the http.request
-  // auth option.  If we don&#x27;t remove it, we&#x27;re gonna have a bad time.
+  // auth option.  If we don't remove it, we're gonna have a bad time.
   var reqOptions = copy(self)
   delete reqOptions.auth
 
-  debug(&#x27;make request&#x27;, self.uri.href)
+  debug('make request', self.uri.href)
 
   try {
     self.req = self.httpModule.request(reqOptions)
   } catch (err) {
-    self.emit(&#x27;error&#x27;, err)
+    self.emit('error', err)
     return
   }
 
@@ -9581,19 +9574,19 @@ response.on(&#x27;data&#x27;, function (chunk) {
     self.startTime = new Date().getTime()
   }
 
-  if (self.timeout &#x26;&#x26; !self.timeoutTimer) {
-    var timeout = self.timeout &#x3c; 0 ? 0 : self.timeout
+  if (self.timeout &amp;&amp; !self.timeoutTimer) {
+    var timeout = self.timeout &lt; 0 ? 0 : self.timeout
     // Set a timeout in memory - this block will throw if the server takes more
     // than `timeout` to write the HTTP status and headers (corresponding to
-    // the on(&#x27;response&#x27;) event on the client). NB: this measures wall-clock
+    // the on('response') event on the client). NB: this measures wall-clock
     // time, not the time between bytes sent by the server.
     self.timeoutTimer = setTimeout(function () {
-      var connectTimeout = self.req.socket &#x26;&#x26; self.req.socket.readable === false
+      var connectTimeout = self.req.socket &amp;&amp; self.req.socket.readable === false
       self.abort()
-      var e = new Error(&#x27;ETIMEDOUT&#x27;)
-      e.code = &#x27;ETIMEDOUT&#x27;
+      var e = new Error('ETIMEDOUT')
+      e.code = 'ETIMEDOUT'
       e.connect = connectTimeout
-      self.emit(&#x27;error&#x27;, e)
+      self.emit('error', e)
     }, timeout)
 
     if (self.req.setTimeout) { // only works on node 0.6+
@@ -9602,30 +9595,30 @@ response.on(&#x27;data&#x27;, function (chunk) {
       // from the server, and may or may not correspond to the wall-clock time
       // elapsed from the start of the request.
       //
-      // In particular, it&#x27;s useful for erroring if the server fails to send
+      // In particular, it's useful for erroring if the server fails to send
       // data halfway through streaming a response.
       self.req.setTimeout(timeout, function () {
         if (self.req) {
           self.req.abort()
-          var e = new Error(&#x27;ESOCKETTIMEDOUT&#x27;)
-          e.code = &#x27;ESOCKETTIMEDOUT&#x27;
+          var e = new Error('ESOCKETTIMEDOUT')
+          e.code = 'ESOCKETTIMEDOUT'
           e.connect = false
-          self.emit(&#x27;error&#x27;, e)
+          self.emit('error', e)
         }
       })
     }
   }
 
-  self.req.on(&#x27;response&#x27;, self.onRequestResponse.bind(self))
-  self.req.on(&#x27;error&#x27;, self.onRequestError.bind(self))
-  self.req.on(&#x27;drain&#x27;, function() {
-    self.emit(&#x27;drain&#x27;)
+  self.req.on('response', self.onRequestResponse.bind(self))
+  self.req.on('error', self.onRequestError.bind(self))
+  self.req.on('drain', function() {
+    self.emit('drain')
   })
-  self.req.on(&#x27;socket&#x27;, function(socket) {
-    self.emit(&#x27;socket&#x27;, socket)
+  self.req.on('socket', function(socket) {
+    self.emit('socket', socket)
   })
 
-  self.emit(&#x27;request&#x27;, self.req)
+  self.emit('request', self.req)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -9676,15 +9669,15 @@ response.setEncoding = function (type) {
 }
 
 // Capture decompression and decode with captured encoding
-unzip.on(&#x27;data&#x27;, function (buffer) {
-  if (!decoder) return stream.emit(&#x27;data&#x27;, buffer)
+unzip.on('data', function (buffer) {
+  if (!decoder) return stream.emit('data', buffer)
   var string = decoder.<span class="apidocCodeKeywordSpan">write</span>(buffer)
-  if (string.length) stream.emit(&#x27;data&#x27;, string)
+  if (string.length) stream.emit('data', string)
 })
 
 // Emit yoself
-unzip.on(&#x27;end&#x27;, function () {
-  stream.emit(&#x27;end&#x27;)
+unzip.on('end', function () {
+  stream.emit('end')
 })
 ...</pre></li>
     </ul>
@@ -9714,7 +9707,7 @@ unzip.on(&#x27;end&#x27;, function () {
     self.response.destroy()
   }
 
-  self.emit(&#x27;abort&#x27;)
+  self.emit('abort')
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -9783,14 +9776,14 @@ Accepts either an `Object` containing `user`, `pass`, and optionally `sendImmedi
     return self
   }
 
-  if (opts.sign_version == 4 || opts.sign_version == &#x27;4&#x27;) {
+  if (opts.sign_version == 4 || opts.sign_version == '4') {
     // use aws4
     var options = {
       host: self.uri.host,
       path: self.uri.path,
       method: self.method,
       headers: {
-        &#x27;content-type&#x27;: self.getHeader(&#x27;content-type&#x27;) || &#x27;&#x27;
+        'content-type': self.getHeader('content-type') || ''
       },
       body: self.body
     }
@@ -9798,34 +9791,34 @@ Accepts either an `Object` containing `user`, `pass`, and optionally `sendImmedi
       accessKeyId: opts.key,
       secretAccessKey: opts.secret
     })
-    self.setHeader(&#x27;authorization&#x27;, signRes.headers.Authorization)
-    self.setHeader(&#x27;x-amz-date&#x27;, signRes.headers[&#x27;X-Amz-Date&#x27;])
+    self.setHeader('authorization', signRes.headers.Authorization)
+    self.setHeader('x-amz-date', signRes.headers['X-Amz-Date'])
   }
   else {
     // default: use aws-sign2
     var date = new Date()
-    self.setHeader(&#x27;date&#x27;, date.toUTCString())
+    self.setHeader('date', date.toUTCString())
     var auth =
       { key: opts.key
       , secret: opts.secret
       , verb: self.method.toUpperCase()
       , date: date
-      , contentType: self.getHeader(&#x27;content-type&#x27;) || &#x27;&#x27;
-      , md5: self.getHeader(&#x27;content-md5&#x27;) || &#x27;&#x27;
+      , contentType: self.getHeader('content-type') || ''
+      , md5: self.getHeader('content-md5') || ''
       , amazonHeaders: aws2.canonicalizeHeaders(self.headers)
       }
     var path = self.uri.path
-    if (opts.bucket &#x26;&#x26; path) {
-      auth.resource = &#x27;/&#x27; + opts.bucket + path
-    } else if (opts.bucket &#x26;&#x26; !path) {
-      auth.resource = &#x27;/&#x27; + opts.bucket
-    } else if (!opts.bucket &#x26;&#x26; path) {
+    if (opts.bucket &amp;&amp; path) {
+      auth.resource = '/' + opts.bucket + path
+    } else if (opts.bucket &amp;&amp; !path) {
+      auth.resource = '/' + opts.bucket
+    } else if (!opts.bucket &amp;&amp; path) {
       auth.resource = path
-    } else if (!opts.bucket &#x26;&#x26; !path) {
-      auth.resource = &#x27;/&#x27;
+    } else if (!opts.bucket &amp;&amp; !path) {
+      auth.resource = '/'
     }
     auth.resource = aws2.canonicalizeResource(auth.resource)
-    self.setHeader(&#x27;authorization&#x27;, aws2.authorization(auth))
+    self.setHeader('authorization', aws2.authorization(auth))
   }
 
   return self
@@ -9864,7 +9857,7 @@ Accepts either an `Object` containing `user`, `pass`, and optionally `sendImmedi
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function debug() {
   if (Request.debug) {
-    console.error(&#x27;REQUEST %s&#x27;, util.format.apply(util, arguments))
+    console.error('REQUEST %s', util.format.apply(util, arguments))
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -9910,8 +9903,8 @@ Accepts either an `Object` containing `user`, `pass`, and optionally `sendImmedi
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">enableUnixSocket = function () {
-  // Get the socket &#x26; request paths from the URL
-  var unixParts = this.uri.path.split(&#x27;:&#x27;)
+  // Get the socket &amp; request paths from the URL
+  var unixParts = this.uri.path.split(':')
     , host = unixParts[0]
     , path = unixParts[1]
   // Apply unix properties to request
@@ -9955,13 +9948,13 @@ Accepts either an `Object` containing `user`, `pass`, and optionally `sendImmedi
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-You&#x27;re probably wondering how by using **Unirest** makes creating requests easier. Besides automatically supporting gzip, and
+You're probably wondering how by using **Unirest** makes creating requests easier. Besides automatically supporting gzip, and
  parsing responses, lets start with a basic working example:
 
 ```js
-unirest.post(&#x27;http://mockbin.com/request&#x27;)
-.headers({&#x27;Accept&#x27;: &#x27;application/json&#x27;, &#x27;Content-Type&#x27;: &#x27;application/json&#x27;})
-.send({ &#x22;parameter&#x22;: 23, &#x22;foo&#x22;: &#x22;bar&#x22; })
+unirest.post('http://mockbin.com/request')
+.headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
+.send({ "parameter": 23, "foo": "bar" })
 .<span class="apidocCodeKeywordSpan">end</span>(function (response) {
   console.log(response.body);
 });
@@ -9990,19 +9983,19 @@ Transferring file data has been simplified:
     <li>description and source-code<pre class="apidocCodePre">form = function (form) {
   var self = this
   if (form) {
-    if (!/^application\/x-www-form-urlencoded\b/.test(self.getHeader(&#x27;content-type&#x27;))) {
-      self.setHeader(&#x27;content-type&#x27;, &#x27;application/x-www-form-urlencoded&#x27;)
+    if (!/^application\/x-www-form-urlencoded\b/.test(self.getHeader('content-type'))) {
+      self.setHeader('content-type', 'application/x-www-form-urlencoded')
     }
-    self.body = (typeof form === &#x27;string&#x27;)
-      ? self._qs.rfc3986(form.toString(&#x27;utf8&#x27;))
-      : self._qs.stringify(form).toString(&#x27;utf8&#x27;)
+    self.body = (typeof form === 'string')
+      ? self._qs.rfc3986(form.toString('utf8'))
+      : self._qs.stringify(form).toString('utf8')
     return self
   }
   // create form-data object
   self._form = new FormData()
-  self._form.on(&#x27;error&#x27;, function(err) {
-    err.message = &#x27;form-data: &#x27; + err.message
-    self.emit(&#x27;error&#x27;, err)
+  self._form.on('error', function(err) {
+    err.message = 'form-data: ' + err.message
+    self.emit('error', err)
     self.abort()
   })
   return self._form
@@ -10012,7 +10005,7 @@ Transferring file data has been simplified:
 Sets `method` value on `Request.options` to the given value.
 
 ```js
-Request.method(&#x27;HEAD&#x27;);
+Request.method('HEAD');
 ```
 
 #### Request.<span class="apidocCodeKeywordSpan">form</span>(Object)
@@ -10051,7 +10044,7 @@ Request.form({
     if (key.length !== name.length) {
       return
     }
-    re = new RegExp(name, &#x27;i&#x27;)
+    re = new RegExp(name, 'i')
     match = key.match(re)
     if (match) {
       result = headers[key]
@@ -10097,11 +10090,11 @@ Request.form({
   if (self.secureOptions) {
     options.secureOptions = self.secureOptions
   }
-  if (typeof self.rejectUnauthorized !== &#x27;undefined&#x27;) {
+  if (typeof self.rejectUnauthorized !== 'undefined') {
     options.rejectUnauthorized = self.rejectUnauthorized
   }
 
-  if (self.cert &#x26;&#x26; self.key) {
+  if (self.cert &amp;&amp; self.key) {
     options.key = self.key
     options.cert = self.cert
   }
@@ -10114,7 +10107,7 @@ Request.form({
     options.passphrase = self.passphrase
   }
 
-  var poolKey = &#x27;&#x27;
+  var poolKey = ''
 
   // different types of agents are in different pools
   if (Agent !== self.httpModule.Agent) {
@@ -10123,68 +10116,68 @@ Request.form({
 
   // ca option is only relevant if proxy or destination are https
   var proxy = self.proxy
-  if (typeof proxy === &#x27;string&#x27;) {
+  if (typeof proxy === 'string') {
     proxy = url.parse(proxy)
   }
-  var isHttps = (proxy &#x26;&#x26; proxy.protocol === &#x27;https:&#x27;) || this.uri.protocol === &#x27;https:&#x27;
+  var isHttps = (proxy &amp;&amp; proxy.protocol === 'https:') || this.uri.protocol === 'https:'
 
   if (isHttps) {
     if (options.ca) {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
       poolKey += options.ca
     }
 
-    if (typeof options.rejectUnauthorized !== &#x27;undefined&#x27;) {
+    if (typeof options.rejectUnauthorized !== 'undefined') {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
       poolKey += options.rejectUnauthorized
     }
 
     if (options.cert) {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
-      poolKey += options.cert.toString(&#x27;ascii&#x27;) + options.key.toString(&#x27;ascii&#x27;)
+      poolKey += options.cert.toString('ascii') + options.key.toString('ascii')
     }
 
     if (options.pfx) {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
-      poolKey += options.pfx.toString(&#x27;ascii&#x27;)
+      poolKey += options.pfx.toString('ascii')
     }
 
     if (options.ciphers) {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
       poolKey += options.ciphers
     }
 
     if (options.secureProtocol) {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
       poolKey += options.secureProtocol
     }
 
     if (options.secureOptions) {
       if (poolKey) {
-        poolKey += &#x27;:&#x27;
+        poolKey += ':'
       }
       poolKey += options.secureOptions
     }
   }
 
-  if (self.pool === globalPool &#x26;&#x26; !poolKey &#x26;&#x26; Object.keys(options).length === 0 &#x26;&#x26; self.httpModule.globalAgent) {
+  if (self.pool === globalPool &amp;&amp; !poolKey &amp;&amp; Object.keys(options).length === 0 &amp;&amp; self.httpModule.globalAgent) {
     // not doing anything special.  Use the globalAgent
     return self.httpModule.globalAgent
   }
 
-  // we&#x27;re using a stored agent.  Make sure it&#x27;s protocol-specific
+  // we're using a stored agent.  Make sure it's protocol-specific
   poolKey = self.uri.protocol + poolKey
 
   // generate a new agent for this setting if none yet exists
@@ -10217,7 +10210,7 @@ Request.form({
     <ul>
     <li>description and source-code<pre class="apidocCodePre">hawk = function (opts) {
   var self = this
-  self.setHeader(&#x27;Authorization&#x27;, hawk.client.header(self.uri, self.method, opts).field)
+  self.setHeader('Authorization', hawk.client.header(self.uri, self.method, opts).field)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 * `followRedirect` (`Boolean`) - Default `true`; Follow HTTP `3xx` responses as redirects.
@@ -10264,7 +10257,7 @@ Request.form({
     method: self.method,
     path: self.path
   }, opts)
-  debug(&#x27;httpSignature authorization&#x27;, self.getHeader(&#x27;authorization&#x27;))
+  debug('httpSignature authorization', self.getHeader('authorization'))
 
   return self
 }</pre></li>
@@ -10314,7 +10307,7 @@ Request.form({
   // Delete headers with value undefined since they break
   // ClientRequest.OutgoingMessage.setHeader in node 0.12
   for (var headerName in self.headers) {
-    if (typeof self.headers[headerName] === &#x27;undefined&#x27;) {
+    if (typeof self.headers[headerName] === 'undefined') {
       delete self.headers[headerName]
     }
   }
@@ -10322,7 +10315,7 @@ Request.form({
   caseless.httpify(self, self.headers)
 
   if (!self.method) {
-    self.method = options.method || &#x27;GET&#x27;
+    self.method = options.method || 'GET'
   }
   if (!self.localAddress) {
     self.localAddress = options.localAddress
@@ -10331,14 +10324,14 @@ Request.form({
   self._qs.init(options)
 
   debug(options)
-  if (!self.pool &#x26;&#x26; self.pool !== false) {
+  if (!self.pool &amp;&amp; self.pool !== false) {
     self.pool = globalPool
   }
   self.dests = self.dests || []
   self.__isRequestRequest = true
 
   // Protect against double callback
-  if (!self._callback &#x26;&#x26; self.callback) {
+  if (!self._callback &amp;&amp; self.callback) {
     self._callback = self.callback
     self.callback = function () {
       if (self._callbackCalled) {
@@ -10347,55 +10340,55 @@ Request.form({
       self._callbackCalled = true
       self._callback.apply(self, arguments)
     }
-    self.on(&#x27;error&#x27;, self.callback.bind())
-    self.on(&#x27;complete&#x27;, self.callback.bind(self, null))
+    self.on('error', self.callback.bind())
+    self.on('complete', self.callback.bind(self, null))
   }
 
   // People use this property instead all the time, so support it
-  if (!self.uri &#x26;&#x26; self.url) {
+  if (!self.uri &amp;&amp; self.url) {
     self.uri = self.url
     delete self.url
   }
 
-  // If there&#x27;s a baseUrl, then use it as the base URL (i.e. uri must be
+  // If there's a baseUrl, then use it as the base URL (i.e. uri must be
   // specified as a relative path and is appended to baseUrl).
   if (self.baseUrl) {
-    if (typeof self.baseUrl !== &#x27;string&#x27;) {
-      return self.emit(&#x27;error&#x27;, new Error(&#x27;options.baseUrl must be a string&#x27;))
+    if (typeof self.baseUrl !== 'string') {
+      return self.emit('error', new Error('options.baseUrl must be a string'))
     }
 
-    if (typeof self.uri !== &#x27;string&#x27;) {
-      return self.emit(&#x27;error&#x27;, new Error(&#x27;options.uri must be a string when using options.baseUrl&#x27;))
+    if (typeof self.uri !== 'string') {
+      return self.emit('error', new Error('options.uri must be a string when using options.baseUrl'))
     }
 
-    if (self.uri.indexOf(&#x27;//&#x27;) === 0 || self.uri.indexOf(&#x27;://&#x27;) !== -1) {
-      return self.emit(&#x27;error&#x27;, new Error(&#x27;options.uri must be a path when using options.baseUrl&#x27;))
+    if (self.uri.indexOf('//') === 0 || self.uri.indexOf('://') !== -1) {
+      return self.emit('error', new Error('options.uri must be a path when using options.baseUrl'))
     }
 
-    // Handle all cases to make sure that there&#x27;s only one slash between
+    // Handle all cases to make sure that there's only one slash between
     // baseUrl and uri.
-    var baseUrlEndsWithSlash = self.baseUrl.lastIndexOf(&#x27;/&#x27;) === self.baseUrl.length - 1
-    var uriStartsWithSlash = self.uri.indexOf(&#x27;/&#x27;) === 0
+    var baseUrlEndsWithSlash = self.baseUrl.lastIndexOf('/') === self.baseUrl.length - 1
+    var uriStartsWithSlash = self.uri.indexOf('/') === 0
 
-    if (baseUrlEndsWithSlash &#x26;&#x26; uriStartsWithSlash) {
+    if (baseUrlEndsWithSlash &amp;&amp; uriStartsWithSlash) {
       self.uri = self.baseUrl + self.uri.slice(1)
     } else if (baseUrlEndsWithSlash || uriStartsWithSlash) {
       self.uri = self.baseUrl + self.uri
-    } else if (self.uri === &#x27;&#x27;) {
+    } else if (self.uri === '') {
       self.uri = self.baseUrl
     } else {
-      self.uri = self.baseUrl + &#x27;/&#x27; + self.uri
+      self.uri = self.baseUrl + '/' + self.uri
     }
     delete self.baseUrl
   }
 
-  // A URI is needed by this point, emit error if we haven&#x27;t been able to get one
+  // A URI is needed by this point, emit error if we haven't been able to get one
   if (!self.uri) {
-    return self.emit(&#x27;error&#x27;, new Error(&#x27;options.uri is a required argument&#x27;))
+    return self.emit('error', new Error('options.uri is a required argument'))
   }
 
   // If a string URI/URL was given, parse it into a URL object
-  if (typeof self.uri === &#x27;string&#x27;) {
+  if (typeof self.uri === 'string') {
     self.uri = url.parse(self.uri)
   }
 
@@ -10405,13 +10398,13 @@ Request.form({
   }
 
   // DEPRECATED: Warning for users of the old Unix Sockets URL Scheme
-  if (self.uri.protocol === &#x27;unix:&#x27;) {
-    return self.emit(&#x27;error&#x27;, new Error(&#x27;`unix://` URL scheme is no longer supported. Please use the format `http://unix:SOCKET:
-PATH`&#x27;))
+  if (self.uri.protocol === 'unix:') {
+    return self.emit('error', new Error('`unix://` URL scheme is no longer supported. Please use the format `http://unix:SOCKET:
+PATH`'))
   }
 
   // Support Unix Sockets
-  if (self.uri.host === &#x27;unix&#x27;) {
+  if (self.uri.host === 'unix') {
     self.enableUnixSocket()
   }
 
@@ -10419,13 +10412,13 @@ PATH`&#x27;))
     self.rejectUnauthorized = false
   }
 
-  if (!self.uri.pathname) {self.uri.pathname = &#x27;/&#x27;}
+  if (!self.uri.pathname) {self.uri.pathname = '/'}
 
-  if (!(self.uri.host || (self.uri.hostname &#x26;&#x26; self.uri.port)) &#x26;&#x26; !self.uri.isUnix) {
-    // Invalid URI: it may generate lot of bad errors, like &#x27;TypeError: Cannot call method `indexOf` of undefined&#x27; in CookieJar
+  if (!(self.uri.host || (self.uri.hostname &amp;&amp; self.uri.port)) &amp;&amp; !self.uri.isUnix) {
+    // Invalid URI: it may generate lot of bad errors, like 'TypeError: Cannot call method `indexOf` of undefined' in CookieJar
     // Detect and reject it as soon as possible
     var faultyUri = url.format(self.uri)
-    var message = &#x27;Invalid URI &#x22;&#x27; + faultyUri + &#x27;&#x22;&#x27;
+    var message = 'Invalid URI "' + faultyUri + '"'
     if (Object.keys(options). ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -10449,7 +10442,7 @@ PATH`&#x27;))
   var cookies
 
   if (self._redirect.redirectsFollowed === 0) {
-    self.originalCookieHeader = self.getHeader(&#x27;cookie&#x27;)
+    self.originalCookieHeader = self.getHeader('cookie')
   }
 
   if (!jar) {
@@ -10457,7 +10450,7 @@ PATH`&#x27;))
     cookies = false
     self._disableCookies = true
   } else {
-    var targetCookieJar = (jar &#x26;&#x26; jar.getCookieString) ? jar : globalCookieJar
+    var targetCookieJar = (jar &amp;&amp; jar.getCookieString) ? jar : globalCookieJar
     var urihref = self.uri.href
     //fetch cookie in the Specified host
     if (targetCookieJar) {
@@ -10466,12 +10459,12 @@ PATH`&#x27;))
   }
 
   //if need cookie and cookie is not empty
-  if (cookies &#x26;&#x26; cookies.length) {
+  if (cookies &amp;&amp; cookies.length) {
     if (self.originalCookieHeader) {
-      // Don&#x27;t overwrite existing Cookie header
-      self.setHeader(&#x27;cookie&#x27;, self.originalCookieHeader + &#x27;; &#x27; + cookies)
+      // Don't overwrite existing Cookie header
+      self.setHeader('cookie', self.originalCookieHeader + '; ' + cookies)
     } else {
-      self.setHeader(&#x27;cookie&#x27;, cookies)
+      self.setHeader('cookie', cookies)
     }
   }
   self._jar = jar
@@ -10482,7 +10475,7 @@ PATH`&#x27;))
 Returns a [Request](#request) object with the `method` option set to `DELETE`
 
 ```js
-var Request = unirest.delete(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.delete('http://mockbin.com/request');
 ```
 
 ## unirest.<span class="apidocCodeKeywordSpan">jar</span>()
@@ -10491,8 +10484,8 @@ Creates a container to store multiple cookies, i.e. a cookie jar.
 
 ```js
 var CookieJar = unirest.jar();
-CookieJar.add(&#x27;key=value&#x27;, &#x27;/&#x27;); // Cookie string, pathname / url
-unirest.get(&#x27;http://mockbin.com/request&#x27;).jar(CookieJar);
+CookieJar.add('key=value', '/'); // Cookie string, pathname / url
+unirest.get('http://mockbin.com/request').jar(CookieJar);
 ...</pre></li>
     </ul>
 
@@ -10513,34 +10506,34 @@ unirest.get(&#x27;http://mockbin.com/request&#x27;).jar(CookieJar);
     <li>description and source-code<pre class="apidocCodePre">json = function (val) {
   var self = this
 
-  if (!self.hasHeader(&#x27;accept&#x27;)) {
-    self.setHeader(&#x27;accept&#x27;, &#x27;application/json&#x27;)
+  if (!self.hasHeader('accept')) {
+    self.setHeader('accept', 'application/json')
   }
 
-  if (typeof self.jsonReplacer === &#x27;function&#x27;) {
+  if (typeof self.jsonReplacer === 'function') {
     self._jsonReplacer = self.jsonReplacer
   }
 
   self._json = true
-  if (typeof val === &#x27;boolean&#x27;) {
+  if (typeof val === 'boolean') {
     if (self.body !== undefined) {
-      if (!/^application\/x-www-form-urlencoded\b/.test(self.getHeader(&#x27;content-type&#x27;))) {
+      if (!/^application\/x-www-form-urlencoded\b/.test(self.getHeader('content-type'))) {
         self.body = safeStringify(self.body, self._jsonReplacer)
       } else {
         self.body = self._qs.rfc3986(self.body)
       }
-      if (!self.hasHeader(&#x27;content-type&#x27;)) {
-        self.setHeader(&#x27;content-type&#x27;, &#x27;application/json&#x27;)
+      if (!self.hasHeader('content-type')) {
+        self.setHeader('content-type', 'application/json')
       }
     }
   } else {
     self.body = safeStringify(val, self._jsonReplacer)
-    if (!self.hasHeader(&#x27;content-type&#x27;)) {
-      self.setHeader(&#x27;content-type&#x27;, &#x27;application/json&#x27;)
+    if (!self.hasHeader('content-type')) {
+      self.setHeader('content-type', 'application/json')
     }
   }
 
-  if (typeof self.jsonReviver === &#x27;function&#x27;) {
+  if (typeof self.jsonReviver === 'function') {
     self._jsonReviver = self.jsonReviver
   }
 
@@ -10549,8 +10542,8 @@ unirest.get(&#x27;http://mockbin.com/request&#x27;).jar(CookieJar);
     <li>example usage<pre class="apidocCodePre">...
 
 if (is(options).a(Object)) {
-  if (options[&#x27;content-type&#x27;]) {
-    var type = Unirest.type(options[&#x27;content-type&#x27;], true)
+  if (options['content-type']) {
+    var type = Unirest.type(options['content-type'], true)
     if (type) options.body = Unirest.Response.parse(options.body)
   } else {
     if (is(options.body).a(Object)) {
@@ -10591,7 +10584,7 @@ if (is(options).a(Object)) {
   return self
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-Request.header(&#x27;Accept&#x27;, &#x27;application/json&#x27;);
+Request.header('Accept', 'application/json');
 ```
 
 #### Request.part(Object)
@@ -10605,8 +10598,8 @@ Each object is then appended to the `Request.options.multipart` array.
 
 ```js
 Request.part({
-&#x27;content-type&#x27;: &#x27;application/json&#x27;,
-body: { foo: &#x27;bar&#x27; }
+'content-type': 'application/json',
+body: { foo: 'bar' }
 ...</pre></li>
     </ul>
 
@@ -10669,18 +10662,18 @@ body: { foo: &#x27;bar&#x27; }
   if (self._aborted) {
     return
   }
-  if (self.req &#x26;&#x26; self.req._reusedSocket &#x26;&#x26; error.code === &#x27;ECONNRESET&#x27;
-      &#x26;&#x26; self.agent.addRequestNoreuse) {
+  if (self.req &amp;&amp; self.req._reusedSocket &amp;&amp; error.code === 'ECONNRESET'
+      &amp;&amp; self.agent.addRequestNoreuse) {
     self.agent = { addRequest: self.agent.addRequestNoreuse.bind(self.agent) }
     self.start()
     self.req.end()
     return
   }
-  if (self.timeout &#x26;&#x26; self.timeoutTimer) {
+  if (self.timeout &amp;&amp; self.timeoutTimer) {
     clearTimeout(self.timeoutTimer)
     self.timeoutTimer = null
   }
-  self.emit(&#x27;error&#x27;, error)
+  self.emit('error', error)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -10701,18 +10694,18 @@ body: { foo: &#x27;bar&#x27; }
     <ul>
     <li>description and source-code<pre class="apidocCodePre">onRequestResponse = function (response) {
   var self = this
-  debug(&#x27;onRequestResponse&#x27;, self.uri.href, response.statusCode, response.headers)
-  response.on(&#x27;end&#x27;, function() {
+  debug('onRequestResponse', self.uri.href, response.statusCode, response.headers)
+  response.on('end', function() {
     if (self.timing) {
       self.elapsedTime += (new Date().getTime() - self.startTime)
-      debug(&#x27;elapsed time&#x27;, self.elapsedTime)
+      debug('elapsed time', self.elapsedTime)
       response.elapsedTime = self.elapsedTime
     }
-    debug(&#x27;response end&#x27;, self.uri.href, response.statusCode, response.headers)
+    debug('response end', self.uri.href, response.statusCode, response.headers)
   })
 
   if (self._aborted) {
-    debug(&#x27;aborted&#x27;, self.uri.href)
+    debug('aborted', self.uri.href)
     response.resume()
     return
   }
@@ -10722,13 +10715,13 @@ body: { foo: &#x27;bar&#x27; }
   response.toJSON = responseToJSON
 
   // XXX This is different on 0.10, because SSL is strict by default
-  if (self.httpModule === https &#x26;&#x26;
-      self.strictSSL &#x26;&#x26; (!response.hasOwnProperty(&#x27;socket&#x27;) ||
+  if (self.httpModule === https &amp;&amp;
+      self.strictSSL &amp;&amp; (!response.hasOwnProperty('socket') ||
       !response.socket.authorized)) {
-    debug(&#x27;strict ssl error&#x27;, self.uri.href)
-    var sslErr = response.hasOwnProperty(&#x27;socket&#x27;) ? response.socket.authorizationError : self.uri.href + &#x27; does not support SSL
-&#x27;
-    self.emit(&#x27;error&#x27;, new Error(&#x27;SSL Error: &#x27; + sslErr))
+    debug('strict ssl error', self.uri.href)
+    var sslErr = response.hasOwnProperty('socket') ? response.socket.authorizationError : self.uri.href + ' does not support SSL
+'
+    self.emit('error', new Error('SSL Error: ' + sslErr))
     return
   }
 
@@ -10736,32 +10729,32 @@ body: { foo: &#x27;bar&#x27; }
   // remove any authorization headers).  Also remember the case of the header
   // name because lots of broken servers expect Host instead of host and we
   // want the caller to be able to specify this.
-  self.originalHost = self.getHeader(&#x27;host&#x27;)
+  self.originalHost = self.getHeader('host')
   if (!self.originalHostHeaderName) {
-    self.originalHostHeaderName = self.hasHeader(&#x27;host&#x27;)
+    self.originalHostHeaderName = self.hasHeader('host')
   }
   if (self.setHost) {
-    self.removeHeader(&#x27;host&#x27;)
+    self.removeHeader('host')
   }
-  if (self.timeout &#x26;&#x26; self.timeoutTimer) {
+  if (self.timeout &amp;&amp; self.timeoutTimer) {
     clearTimeout(self.timeoutTimer)
     self.timeoutTimer = null
   }
 
-  var targetCookieJar = (self._jar &#x26;&#x26; self._jar.setCookie) ? self._jar : globalCookieJar
+  var targetCookieJar = (self._jar &amp;&amp; self._jar.setCookie) ? self._jar : globalCookieJar
   var addCookie = function (cookie) {
-    //set the cookie if it&#x27;s domain in the href&#x27;s domain.
+    //set the cookie if it's domain in the href's domain.
     try {
       targetCookieJar.setCookie(cookie, self.uri.href, {ignoreError: true})
     } catch (e) {
-      self.emit(&#x27;error&#x27;, e)
+      self.emit('error', e)
     }
   }
 
   response.caseless = caseless(response.headers)
 
-  if (response.caseless.has(&#x27;set-cookie&#x27;) &#x26;&#x26; (!self._disableCookies)) {
-    var headerName = response.caseless.has(&#x27;set-cookie&#x27;)
+  if (response.caseless.has('set-cookie') &amp;&amp; (!self._disableCookies)) {
+    var headerName = response.caseless.has('set-cookie')
     if (Array.isArray(response.headers[headerName])) {
       response.headers[headerName].forEach(addCookie)
     } else {
@@ -10774,21 +10767,21 @@ body: { foo: &#x27;bar&#x27; }
   } else {
     // Be a good stream and emit end when the response is finished.
     // Hack to emit end on close because of a core bug that never fires end
-    response.on(&#x27;close&#x27;, function () {
+    response.on('close', function () {
       if (!self._ended) {
-        self.response.emit(&#x27;end&#x27;)
+        self.response.emit('end')
       }
     })
 
-    response.on(&#x27;end&#x27;, function () {
+    response.on('end', function () {
       self._ended = true
     })
 
     var noBody = function (code) {
       return (
-        self.method === &#x27;HEAD&#x27;
+        self.method === 'HEAD'
         // Informational
-        || (code &#x3e;= 100 &#x26;&#x26; code &#x3c; 200)
+        || (code &gt;= 100 &amp;&amp; code &lt; 200)
         // No Content
         || code === 204
         // Not Modified
@@ -10797,21 +10790,21 @@ body: { foo: &#x27;bar&#x27; }
     }
 
     var responseContent
-    if (self.gzip &#x26;&#x26; !noBody(response.statusCode)) {
-      var contentEncoding = response.headers[&#x27;content-encoding&#x27;] || &#x27;identity&#x27;
+    if (self.gzip &amp;&amp; !noBody(response.statusCode)) {
+      var contentEncoding = response.headers['content-encoding'] || 'identity'
       contentEncoding = contentEncoding.trim().toLowerCase()
 
-      if (contentEncoding === &#x27;gzip&#x27;) {
+      if (contentEncoding === 'gzip') {
         responseContent = zlib.createGunzip()
         response.pipe(responseContent)
-      } else if (contentEncoding === &#x27;deflate&#x27;) {
+      } else if (contentEncoding === 'deflate') {
         responseContent = zlib.createInflate()
         response.pipe(responseContent)
       } else {
-        // Since previous versions didn&#x27;t check for Content-Encoding header,
+        // Since previous versions didn't check for Content-Encoding header,
         // ignore any invalid values to preserve backwards-compatibility
-        if (contentEncoding !== &#x27;identity&#x27;) {
-          debug(&#x27;ignoring unrecognized Content-Encoding &#x27; + contentEncoding)
+        if (contentEncoding !== 'identity') {
+          debug('ignoring unrecognized Content-Encoding ' + contentEncoding)
         }
         responseContent = response
       }
@@ -10821,7 +10814,7 @@ body: { foo: &#x27;bar&#x27; }
 
     if (self.encoding) {
       if (self.dests.length !== 0) {
-        console.error(&#x27;Ignoring encoding parameter as this stream is being piped to another stream which makes the encoding opti ...</pre></li>
+        console.error('Ignoring encoding parameter as this stream is being piped to another stream which makes the encoding opti ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -10869,9 +10862,9 @@ body: { foo: &#x27;bar&#x27; }
 
   if (self.response) {
     if (self._destdata) {
-      self.emit(&#x27;error&#x27;, new Error(&#x27;You cannot pipe after data has been emitted from the response.&#x27;))
+      self.emit('error', new Error('You cannot pipe after data has been emitted from the response.'))
     } else if (self._ended) {
-      self.emit(&#x27;error&#x27;, new Error(&#x27;You cannot pipe after the response has been ended.&#x27;))
+      self.emit('error', new Error('You cannot pipe after the response has been ended.'))
     } else {
       stream.Stream.prototype.pipe.call(self, dest, opts)
       self.pipeDest(dest)
@@ -10887,7 +10880,7 @@ body: { foo: &#x27;bar&#x27; }
     return
   }
 
-  stream.emit(&#x27;error&#x27;, error)
+  stream.emit('error', error)
 })
 
 // Start the processing
@@ -10920,9 +10913,9 @@ response.setEncoding = function (type) {
   var self = this
   var response = self.response
   // Called after the response is received
-  if (dest.headers &#x26;&#x26; !dest.headersSent) {
-    if (response.caseless.has(&#x27;content-type&#x27;)) {
-      var ctname = response.caseless.has(&#x27;content-type&#x27;)
+  if (dest.headers &amp;&amp; !dest.headersSent) {
+    if (response.caseless.has('content-type')) {
+      var ctname = response.caseless.has('content-type')
       if (dest.setHeader) {
         dest.setHeader(ctname, response.headers[ctname])
       }
@@ -10931,8 +10924,8 @@ response.setEncoding = function (type) {
       }
     }
 
-    if (response.caseless.has(&#x27;content-length&#x27;)) {
-      var clname = response.caseless.has(&#x27;content-length&#x27;)
+    if (response.caseless.has('content-length')) {
+      var clname = response.caseless.has('content-length')
       if (dest.setHeader) {
         dest.setHeader(clname, response.headers[clname])
       } else {
@@ -10940,11 +10933,11 @@ response.setEncoding = function (type) {
       }
     }
   }
-  if (dest.setHeader &#x26;&#x26; !dest.headersSent) {
+  if (dest.setHeader &amp;&amp; !dest.headersSent) {
     for (var i in response.headers) {
       // If the response content is being decoded, the Content-Encoding header
-      // of the response doesn&#x27;t represent the piped content, so don&#x27;t pass it.
-      if (!self.gzip || i !== &#x27;content-encoding&#x27;) {
+      // of the response doesn't represent the piped content, so don't pass it.
+      if (!self.gzip || i !== 'content-encoding') {
         dest.setHeader(i, response.headers[i])
       }
     }
@@ -10974,7 +10967,7 @@ response.setEncoding = function (type) {
     <li>description and source-code<pre class="apidocCodePre">qs = function (q, clobber) {
   var self = this
   var base
-  if (!clobber &#x26;&#x26; self.uri.query) {
+  if (!clobber &amp;&amp; self.uri.query) {
     base = self._qs.parse(self.uri.query)
   } else {
     base = {}
@@ -10986,15 +10979,15 @@ response.setEncoding = function (type) {
 
   var qs = self._qs.stringify(base)
 
-  if (qs === &#x27;&#x27;) {
+  if (qs === '') {
     return self
   }
 
-  self.uri = url.parse(self.uri.href.split(&#x27;?&#x27;)[0] + &#x27;?&#x27; + qs)
+  self.uri = url.parse(self.uri.href.split('?')[0] + '?' + qs)
   self.url = self.uri
   self.path = self.uri.path
 
-  if (self.uri.host === &#x27;unix&#x27;) {
+  if (self.uri.host === 'unix') {
     self.enableUnixSocket()
   }
 
@@ -11019,21 +11012,21 @@ response.setEncoding = function (type) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">readResponseBody = function (response) {
   var self = this
-  debug(&#x27;reading response\&#x27;s body&#x27;)
+  debug('reading response\'s body')
   var buffer = bl()
     , strings = []
 
-  self.on(&#x27;data&#x27;, function (chunk) {
+  self.on('data', function (chunk) {
     if (Buffer.isBuffer(chunk)) {
       buffer.append(chunk)
     } else {
       strings.push(chunk)
     }
   })
-  self.on(&#x27;end&#x27;, function () {
-    debug(&#x27;end event&#x27;, self.uri.href)
+  self.on('end', function () {
+    debug('end event', self.uri.href)
     if (self._aborted) {
-      debug(&#x27;aborted&#x27;, self.uri.href)
+      debug('aborted', self.uri.href)
       // `buffer` is defined in the parent scope and used in a closure it exists for the life of the request.
       // This can lead to leaky behavior if the user retains a reference to the request object.
       buffer.destroy()
@@ -11041,10 +11034,10 @@ response.setEncoding = function (type) {
     }
 
     if (buffer.length) {
-      debug(&#x27;has body&#x27;, self.uri.href, buffer.length)
+      debug('has body', self.uri.href, buffer.length)
       if (self.encoding === null) {
         // response.body = buffer
-        // can&#x27;t move to this until https://github.com/rvagg/bl/issues/13
+        // can't move to this until https://github.com/rvagg/bl/issues/13
         response.body = buffer.slice()
       } else {
         response.body = buffer.toString(self.encoding)
@@ -11054,26 +11047,26 @@ response.setEncoding = function (type) {
       buffer.destroy()
     } else if (strings.length) {
       // The UTF8 BOM [0xEF,0xBB,0xBF] is converted to [0xFE,0xFF] in the JS UTC16/UCS2 representation.
-      // Strip this value out when the encoding is set to &#x27;utf8&#x27;, as upstream consumers won&#x27;t expect it and it breaks JSON.parse
+      // Strip this value out when the encoding is set to 'utf8', as upstream consumers won't expect it and it breaks JSON.parse
 ().
-      if (self.encoding === &#x27;utf8&#x27; &#x26;&#x26; strings[0].length &#x3e; 0 &#x26;&#x26; strings[0][0] === &#x27;\uFEFF&#x27;) {
+      if (self.encoding === 'utf8' &amp;&amp; strings[0].length &gt; 0 &amp;&amp; strings[0][0] === '\uFEFF') {
         strings[0] = strings[0].substring(1)
       }
-      response.body = strings.join(&#x27;&#x27;)
+      response.body = strings.join('')
     }
 
     if (self._json) {
       try {
         response.body = JSON.parse(response.body, self._jsonReviver)
       } catch (e) {
-        debug(&#x27;invalid JSON received&#x27;, self.uri.href)
+        debug('invalid JSON received', self.uri.href)
       }
     }
-    debug(&#x27;emitting complete&#x27;, self.uri.href)
-    if (typeof response.body === &#x27;undefined&#x27; &#x26;&#x26; !self._json) {
-      response.body = self.encoding === null ? new Buffer(0) : &#x27;&#x27;
+    debug('emitting complete', self.uri.href)
+    if (typeof response.body === 'undefined' &amp;&amp; !self._json) {
+      response.body = self.encoding === null ? new Buffer(0) : ''
     }
-    self.emit(&#x27;complete&#x27;, response, response.body)
+    self.emit('complete', response, response.body)
   })
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -11105,7 +11098,7 @@ response.setEncoding = function (type) {
 }
 
 if (!response.body) {
-  response.body = &#x27;&#x27;
+  response.body = ''
 }
 
 // Node 10+
@@ -11115,8 +11108,8 @@ response.<span class="apidocCodeKeywordSpan">resume</span>()
 handleGZIPResponse(response)
 
 // Fallback
-response.on(&#x27;data&#x27;, function (chunk) {
-  if (typeof chunk === &#x27;string&#x27;) response.body += chunk
+response.on('data', function (chunk) {
+  if (typeof chunk === 'string') response.body += chunk
 ...</pre></li>
     </ul>
 
@@ -11144,27 +11137,27 @@ response.on(&#x27;data&#x27;, function (chunk) {
   }
 
   self._started = true
-  self.method = self.method || &#x27;GET&#x27;
+  self.method = self.method || 'GET'
   self.href = self.uri.href
 
-  if (self.src &#x26;&#x26; self.src.stat &#x26;&#x26; self.src.stat.size &#x26;&#x26; !self.hasHeader(&#x27;content-length&#x27;)) {
-    self.setHeader(&#x27;content-length&#x27;, self.src.stat.size)
+  if (self.src &amp;&amp; self.src.stat &amp;&amp; self.src.stat.size &amp;&amp; !self.hasHeader('content-length')) {
+    self.setHeader('content-length', self.src.stat.size)
   }
   if (self._aws) {
     self.aws(self._aws, true)
   }
 
   // We have a method named auth, which is completely different from the http.request
-  // auth option.  If we don&#x27;t remove it, we&#x27;re gonna have a bad time.
+  // auth option.  If we don't remove it, we're gonna have a bad time.
   var reqOptions = copy(self)
   delete reqOptions.auth
 
-  debug(&#x27;make request&#x27;, self.uri.href)
+  debug('make request', self.uri.href)
 
   try {
     self.req = self.httpModule.request(reqOptions)
   } catch (err) {
-    self.emit(&#x27;error&#x27;, err)
+    self.emit('error', err)
     return
   }
 
@@ -11172,19 +11165,19 @@ response.on(&#x27;data&#x27;, function (chunk) {
     self.startTime = new Date().getTime()
   }
 
-  if (self.timeout &#x26;&#x26; !self.timeoutTimer) {
-    var timeout = self.timeout &#x3c; 0 ? 0 : self.timeout
+  if (self.timeout &amp;&amp; !self.timeoutTimer) {
+    var timeout = self.timeout &lt; 0 ? 0 : self.timeout
     // Set a timeout in memory - this block will throw if the server takes more
     // than `timeout` to write the HTTP status and headers (corresponding to
-    // the on(&#x27;response&#x27;) event on the client). NB: this measures wall-clock
+    // the on('response') event on the client). NB: this measures wall-clock
     // time, not the time between bytes sent by the server.
     self.timeoutTimer = setTimeout(function () {
-      var connectTimeout = self.req.socket &#x26;&#x26; self.req.socket.readable === false
+      var connectTimeout = self.req.socket &amp;&amp; self.req.socket.readable === false
       self.abort()
-      var e = new Error(&#x27;ETIMEDOUT&#x27;)
-      e.code = &#x27;ETIMEDOUT&#x27;
+      var e = new Error('ETIMEDOUT')
+      e.code = 'ETIMEDOUT'
       e.connect = connectTimeout
-      self.emit(&#x27;error&#x27;, e)
+      self.emit('error', e)
     }, timeout)
 
     if (self.req.setTimeout) { // only works on node 0.6+
@@ -11193,30 +11186,30 @@ response.on(&#x27;data&#x27;, function (chunk) {
       // from the server, and may or may not correspond to the wall-clock time
       // elapsed from the start of the request.
       //
-      // In particular, it&#x27;s useful for erroring if the server fails to send
+      // In particular, it's useful for erroring if the server fails to send
       // data halfway through streaming a response.
       self.req.setTimeout(timeout, function () {
         if (self.req) {
           self.req.abort()
-          var e = new Error(&#x27;ESOCKETTIMEDOUT&#x27;)
-          e.code = &#x27;ESOCKETTIMEDOUT&#x27;
+          var e = new Error('ESOCKETTIMEDOUT')
+          e.code = 'ESOCKETTIMEDOUT'
           e.connect = false
-          self.emit(&#x27;error&#x27;, e)
+          self.emit('error', e)
         }
       })
     }
   }
 
-  self.req.on(&#x27;response&#x27;, self.onRequestResponse.bind(self))
-  self.req.on(&#x27;error&#x27;, self.onRequestError.bind(self))
-  self.req.on(&#x27;drain&#x27;, function() {
-    self.emit(&#x27;drain&#x27;)
+  self.req.on('response', self.onRequestResponse.bind(self))
+  self.req.on('error', self.onRequestError.bind(self))
+  self.req.on('drain', function() {
+    self.emit('drain')
   })
-  self.req.on(&#x27;socket&#x27;, function(socket) {
-    self.emit(&#x27;socket&#x27;, socket)
+  self.req.on('socket', function(socket) {
+    self.emit('socket', socket)
   })
 
-  self.emit(&#x27;request&#x27;, self.req)
+  self.emit('request', self.req)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -11277,15 +11270,15 @@ response.setEncoding = function (type) {
 }
 
 // Capture decompression and decode with captured encoding
-unzip.on(&#x27;data&#x27;, function (buffer) {
-  if (!decoder) return stream.emit(&#x27;data&#x27;, buffer)
+unzip.on('data', function (buffer) {
+  if (!decoder) return stream.emit('data', buffer)
   var string = decoder.<span class="apidocCodeKeywordSpan">write</span>(buffer)
-  if (string.length) stream.emit(&#x27;data&#x27;, string)
+  if (string.length) stream.emit('data', string)
 })
 
 // Emit yoself
-unzip.on(&#x27;end&#x27;, function () {
-  stream.emit(&#x27;end&#x27;)
+unzip.on('end', function () {
+  stream.emit('end')
 })
 ...</pre></li>
     </ul>
@@ -11309,14 +11302,14 @@ unzip.on(&#x27;end&#x27;, function () {
 
   options = options || {}
 
-  if (typeof options === &#x27;function&#x27;) {
+  if (typeof options === 'function') {
     requester = options
     options = {}
   }
 
   var defaults      = wrapRequestMethod(self, options, requester)
 
-  var verbs = [&#x27;get&#x27;, &#x27;head&#x27;, &#x27;post&#x27;, &#x27;put&#x27;, &#x27;patch&#x27;, &#x27;del&#x27;, &#x27;delete&#x27;]
+  var verbs = ['get', 'head', 'post', 'put', 'patch', 'del', 'delete']
   verbs.forEach(function(verb) {
     defaults[verb]  = wrapRequestMethod(self[verb], options, requester, verb)
   })
@@ -11371,14 +11364,14 @@ unzip.on(&#x27;end&#x27;, function () {
   return request(params, params.callback)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var Request = unirest.patch(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.patch('http://mockbin.com/request');
 ```
 
 ### delete
 Returns a [Request](#request) object with the `method` option set to `DELETE`
 
 ```js
-var Request = unirest.<span class="apidocCodeKeywordSpan">delete</span>(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.<span class="apidocCodeKeywordSpan">delete</span>('http://mockbin.com/request');
 ```
 
 ## unirest.jar()
@@ -11460,14 +11453,14 @@ When no `callback` is present, the [Request](#request) object will be returned.
 Returns a [Request](#request) object with the `method` option set to `GET`
 
 ```js
-var Request = unirest.<span class="apidocCodeKeywordSpan">get</span>(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.<span class="apidocCodeKeywordSpan">get</span>('http://mockbin.com/request');
 ```
 
 ### head
 Returns a [Request](#request) object with the `method` option set to `HEAD`
 
 ```js
-var Request = unirest.head(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.head('http://mockbin.com/request');
 ...</pre></li>
     </ul>
 
@@ -11491,21 +11484,21 @@ var Request = unirest.head(&#x27;http://mockbin.com/request&#x27;);
   return request(params, params.callback)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var Request = unirest.get(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.get('http://mockbin.com/request');
 ```
 
 ### head
 Returns a [Request](#request) object with the `method` option set to `HEAD`
 
 ```js
-var Request = unirest.<span class="apidocCodeKeywordSpan">head</span>(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.<span class="apidocCodeKeywordSpan">head</span>('http://mockbin.com/request');
 ```
 
 ### put
 Returns a [Request](#request) object with the `method` option set to `PUT`
 
 ```js
-var Request = unirest.put(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.put('http://mockbin.com/request');
 ...</pre></li>
     </ul>
 
@@ -11524,14 +11517,14 @@ var Request = unirest.put(&#x27;http://mockbin.com/request&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function initParams(uri, options, callback) {
-  if (typeof options === &#x27;function&#x27;) {
+  if (typeof options === 'function') {
     callback = options
   }
 
   var params = {}
-  if (typeof options === &#x27;object&#x27;) {
+  if (typeof options === 'object') {
     extend(params, options, {uri: uri})
-  } else if (typeof uri === &#x27;string&#x27;) {
+  } else if (typeof uri === 'string') {
     extend(params, {uri: uri})
   } else {
     extend(params, uri)
@@ -11565,7 +11558,7 @@ var Request = unirest.put(&#x27;http://mockbin.com/request&#x27;);
 Returns a [Request](#request) object with the `method` option set to `DELETE`
 
 ```js
-var Request = unirest.delete(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.delete('http://mockbin.com/request');
 ```
 
 ## unirest.<span class="apidocCodeKeywordSpan">jar</span>()
@@ -11574,8 +11567,8 @@ Creates a container to store multiple cookies, i.e. a cookie jar.
 
 ```js
 var CookieJar = unirest.jar();
-CookieJar.add(&#x27;key=value&#x27;, &#x27;/&#x27;); // Cookie string, pathname / url
-unirest.get(&#x27;http://mockbin.com/request&#x27;).jar(CookieJar);
+CookieJar.add('key=value', '/'); // Cookie string, pathname / url
+unirest.get('http://mockbin.com/request').jar(CookieJar);
 ...</pre></li>
     </ul>
 
@@ -11606,14 +11599,14 @@ unirest.get(&#x27;http://mockbin.com/request&#x27;).jar(CookieJar);
 Returns a [Request](#request) object with the `method` option set to `PATCH`
 
 ```js
-var Request = unirest.<span class="apidocCodeKeywordSpan">patch</span>(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.<span class="apidocCodeKeywordSpan">patch</span>('http://mockbin.com/request');
 ```
 
 ### delete
 Returns a [Request](#request) object with the `method` option set to `DELETE`
 
 ```js
-var Request = unirest.delete(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.delete('http://mockbin.com/request');
 ...</pre></li>
     </ul>
 
@@ -11641,13 +11634,13 @@ var Request = unirest.delete(&#x27;http://mockbin.com/request&#x27;);
 
 ## Creating Requests
 
-You&#x27;re probably wondering how by using **Unirest** makes creating requests easier. Besides automatically supporting gzip, and
+You're probably wondering how by using **Unirest** makes creating requests easier. Besides automatically supporting gzip, and
  parsing responses, lets start with a basic working example:
 
 ```js
-unirest.<span class="apidocCodeKeywordSpan">post</span>(&#x27;http://mockbin.com/request&#x27;)
-.headers({&#x27;Accept&#x27;: &#x27;application/json&#x27;, &#x27;Content-Type&#x27;: &#x27;application/json&#x27;})
-.send({ &#x22;parameter&#x22;: 23, &#x22;foo&#x22;: &#x22;bar&#x22; })
+unirest.<span class="apidocCodeKeywordSpan">post</span>('http://mockbin.com/request')
+.headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
+.send({ "parameter": 23, "foo": "bar" })
 .end(function (response) {
   console.log(response.body);
 });
@@ -11675,21 +11668,21 @@ unirest.<span class="apidocCodeKeywordSpan">post</span>(&#x27;http://mockbin.com
   return request(params, params.callback)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var Request = unirest.head(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.head('http://mockbin.com/request');
 ```
 
 ### put
 Returns a [Request](#request) object with the `method` option set to `PUT`
 
 ```js
-var Request = unirest.<span class="apidocCodeKeywordSpan">put</span>(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.<span class="apidocCodeKeywordSpan">put</span>('http://mockbin.com/request');
 ```
 
 ### post
 Returns a [Request](#request) object with the `method` option set to `POST`
 
 ```js
-var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
+var Request = unirest.post('http://mockbin.com/request');
 ...</pre></li>
     </ul>
 
@@ -11715,7 +11708,7 @@ var Request = unirest.post(&#x27;http://mockbin.com/request&#x27;);
 Sets `method` value on `Request.options` to the given value.
 
 ```js
-Request.method(&#x27;HEAD&#x27;);
+Request.method('HEAD');
 ```
 
 #### Request.<span class="apidocCodeKeywordSpan">form</span>(Object)
@@ -11745,8 +11738,8 @@ Request.form({
     <li>example usage<pre class="apidocCodePre">...
 
 if (is(options).a(Object)) {
-  if (options[&#x27;content-type&#x27;]) {
-    var type = Unirest.type(options[&#x27;content-type&#x27;], true)
+  if (options['content-type']) {
+    var type = Unirest.type(options['content-type'], true)
     if (type) options.body = Unirest.Response.parse(options.body)
   } else {
     if (is(options.body).a(Object)) {
@@ -11783,7 +11776,7 @@ if (is(options).a(Object)) {
 Sets `method` value on `Request.options` to the given value.
 
 ```js
-Request.method(&#x27;HEAD&#x27;);
+Request.method('HEAD');
 ```
 
 #### Request.<span class="apidocCodeKeywordSpan">form</span>(Object)
@@ -11818,8 +11811,8 @@ Request.form({
     <li>example usage<pre class="apidocCodePre">...
 
 if (is(options).a(Object)) {
-  if (options[&#x27;content-type&#x27;]) {
-    var type = Unirest.type(options[&#x27;content-type&#x27;], true)
+  if (options['content-type']) {
+    var type = Unirest.type(options['content-type'], true)
     if (type) options.body = Unirest.Response.parse(options.body)
   } else {
     if (is(options.body).a(Object)) {
@@ -11891,12 +11884,12 @@ result.cookie = function (name) {
 }
 
 function setCookie (cookie) {
-  var crumbs = Unirest.<span class="apidocCodeKeywordSpan">trim</span>(cookie).split(&#x27;=&#x27;)
+  var crumbs = Unirest.<span class="apidocCodeKeywordSpan">trim</span>(cookie).split('=')
   var key = Unirest.trim(crumbs[0])
-  var value = Unirest.trim(crumbs.slice(1).join(&#x27;=&#x27;))
+  var value = Unirest.trim(crumbs.slice(1).join('='))
 
-  if (crumbs[0] &#x26;&#x26; crumbs[0] !== &#x27;&#x27;) {
-    result.cookies[key] = value === &#x27;&#x27; ? true : value
+  if (crumbs[0] &amp;&amp; crumbs[0] !== '') {
+    result.cookies[key] = value === '' ? true : value
   }
 }
 ...</pre></li>
@@ -11917,7 +11910,7 @@ function setCookie (cookie) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">type = function (type, parse) {
-  if (typeof type !== &#x27;string&#x27;) return false
+  if (typeof type !== 'string') return false
   return parse ? type.split(/ *; */).shift() : (Unirest.types[type] || type)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -11936,7 +11929,7 @@ When mime-type is `application/x-www-form-urlencoded` data is appended rather th
 **JSON**
 
 ```js
-unirest.post(&#x27;http://mockbin.com/request&#x27;)
+unirest.post('http://mockbin.com/request')
 ...</pre></li>
     </ul>
 
@@ -11949,3 +11942,4 @@ unirest.post(&#x27;http://mockbin.com/request&#x27;)
     ]
 </div>
 </div>
+</body></html>
