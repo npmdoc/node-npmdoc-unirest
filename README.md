@@ -1,6 +1,6 @@
 # npmdoc-unirest
 
-#### api documentation for  [unirest (v0.5.1)](https://github.com/Mashape/unirest-nodejs#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-unirest.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-unirest) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-unirest.svg)](https://travis-ci.org/npmdoc/node-npmdoc-unirest)
+#### basic api documentation for  [unirest (v0.5.1)](https://github.com/Mashape/unirest-nodejs#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-unirest.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-unirest) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-unirest.svg)](https://travis-ci.org/npmdoc/node-npmdoc-unirest)
 
 #### Simplified, lightweight HTTP client library
 
@@ -75,7 +75,8 @@
     "scripts": {
         "test": "make test"
     },
-    "version": "0.5.1"
+    "version": "0.5.1",
+    "bin": {}
 }
 ```
 
